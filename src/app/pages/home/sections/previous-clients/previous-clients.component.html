@@ -1,21 +1,31 @@
 <section class="clients-movement flow-spacing-compact">
   <div class="container">
     <div class="clients-masthead">
-      <span class="editorial-kicker">شركاء النجاح والثقة</span>
+      <!-- Symmetrical Editorial Kicker -->
+      <div class="clients-kicker-wrap">
+        <span class="kicker-line kicker-right" aria-hidden="true"></span>
+        <span class="editorial-kicker">شركاء النجاح والثقة</span>
+        <span class="kicker-line kicker-left" aria-hidden="true"></span>
+      </div>
+
       <h2 class="clients-headline">
         شواهد الأثر والموثوقية في كبرى المحافل الوطنية
       </h2>
+
+      <p class="clients-subhead">
+        شراكات استراتيجية موثوقة مع كبرى الجهات الحكومية والسيادية والمؤسسات الرائدة في صناعة وإحياء المشهد الثقافي والوطني للمملكة.
+      </p>
     </div>
   </div>
 
-  <!-- Continuous Refined Editorial Logo Marquee (Zero Cards) -->
+  <!-- Continuous Refined Editorial Logo Ribbon (Zero Cards) -->
   <div class="marquee-viewport">
     <div #clientSwiper class="swiper clients-swiper">
       <div class="swiper-wrapper ease-linear">
         @for (c of clients; track c.id) {
           <div class="swiper-slide client-slide">
-            <div class="client-logo-item">
-              <img [src]="c.logo" [alt]="c.name" class="client-real-logo" />
+            <div class="client-logo-stage" [attr.aria-label]="c.name" [title]="c.name">
+              <img [src]="c.logo" [alt]="c.name" class="client-real-logo" loading="lazy" />
             </div>
           </div>
         }

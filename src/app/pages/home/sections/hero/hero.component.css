@@ -59,7 +59,7 @@
   z-index: 2;
   pointer-events: none;
   /* Balanced deep warm charcoal tone across entire Hero for optimal photo visibility & text contrast */
-  background-color: rgba(18, 17, 15, 0.70);
+  background-color: rgba(18, 17, 15, 0.80);
   will-change: opacity;
 }
 
@@ -144,6 +144,7 @@
     opacity: 0;
     transform: translateY(18px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -155,6 +156,7 @@
     opacity: 0.88;
     transform: scale(1.05);
   }
+
   100% {
     opacity: 1;
     transform: scale(1.02);
@@ -323,101 +325,329 @@
   }
 }
 
+/* --------------------------------------------------------------------------
+   Mobile Hero Intentional Vertical Composition
+   - Structure: Navbar (24–35px gap) → Eyebrow (10–14px gap) → Headline
+     (14–18px gap) → Paragraph (18–24px gap) → CTA → (50–80px breathing space)
+   - Single content block: width: min(100% - 40px, 350px)
+   - No simple justify-content: center (avoids excessive voids above/below)
+   - Full viewport height preserved (min-height: 100svh)
+   - Two strong intentional headline lines with zero orphan words
+   -------------------------------------------------------------------------- */
+
+/* Base Tablet / Large Mobile Breakpoint (768px) */
 @media (max-width: 768px) {
   .hero-cinematic-stage {
     min-height: 100vh;
     min-height: 100svh;
-    /* Clean vertical rhythm clearing mobile navbar with comfortable breathing room */
-    padding-top: clamp(90px, 14vh, 120px);
-    padding-bottom: clamp(40px, 6vh, 60px);
-    padding-inline: clamp(16px, 5vw, 24px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Position content well below navbar with clear breathing room */
+    padding-top: clamp(150px, 20vh, 200px);
+    padding-bottom: clamp(60px, 8vh, 90px);
+    padding-inline: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
-  /* Intentionally cropped for mobile: Emphasizes Saudi riders and camel heads,
-     cutting away excessive lower camel legs while preserving sky and desert warmth */
   .hero-cinematic-img {
-    object-position: 50% 12%;
+    object-position: center 16%;
   }
 
+  .hero-content-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    flex: 0 0 auto;
+  }
+
+  /* Wider container so nowrap headline fits on both lines */
   .hero-centerpiece {
-    max-width: 100%;
+    width: min(calc(100% - 16px), 440px);
+    margin-inline: auto;
+    margin-block: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  /* 1. Mobile Eyebrow */
+  /* 1. Eyebrow with Editorial Gold Accent Line (Navbar → eyebrow: ~30px) */
   .hero-eyebrow {
-    margin-bottom: clamp(14px, 2.2vh, 18px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 14px;
+    /* Eyebrow → headline: 14px */
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 1.5px;
+    background-color: var(--ochre, #C18B44);
+    border-radius: 1px;
+    opacity: 0.85;
   }
 
   .eyebrow-text {
-    font-size: clamp(0.85rem, 3.4vw, 0.95rem);
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: #C18B44;
   }
 
-  /* 2. Mobile Headline: 85–90% width, generous line-height (1.65), protected dots & tashkeel */
+  /* 2. Headline: Always exactly 2 lines — white-space nowrap prevents 3rd line */
   .hero-main-title {
-    font-size: clamp(1.65rem, 6.2vw, 2.15rem);
-    line-height: 1.65;
-    max-width: clamp(310px, 88vw, 420px);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.55;
     margin-inline: auto;
-    margin-bottom: clamp(14px, 2.2vh, 18px);
+    margin-bottom: 16px;
+    text-align: center;
   }
 
   .headline-mask {
-    padding-block: 6px;
+    display: block;
+    padding-block: 3px;
   }
 
-  /* 3. Mobile Supporting Description: Contained block, comfortable line-height */
+  /* nowrap: each headline-mask becomes exactly 1 rendered line */
+  .headline-line {
+    display: block;
+    white-space: nowrap;
+  }
+
+  /* 3. Supporting Description */
   .hero-supporting-copy {
-    font-size: clamp(0.86rem, 3.2vw, 0.94rem);
-    line-height: 1.68;
-    max-width: clamp(280px, 84vw, 340px);
+    font-size: 14px;
+    line-height: 1.78;
+    max-width: 340px;
     margin-inline: auto;
-    margin-bottom: clamp(24px, 3.6vh, 32px);
-    padding-inline: 4px;
+    margin-bottom: 24px;
+    /* Paragraph → CTA: 24px */
+    padding-inline: 0;
   }
 
-  /* 4. Mobile CTA: Appropriately sized, easy to tap, not full-width, not pill-shaped */
+  /* 4. Substantial Primary CTA */
+  .hero-cta-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
   .hero-cta-btn {
-    padding: 12px 30px;
-    font-size: 0.90rem;
     min-height: 48px;
+    padding: 12px 30px;
+    font-size: 14.5px;
+    font-weight: 600;
     width: auto;
     max-width: 260px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22);
+    gap: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22);
   }
 
-  /* 5. Minimal scroll cue hidden on mobile to prevent vertical crowding */
+  /* 5. Minimal scroll cue hidden on mobile */
   .hero-scroll-cue {
     display: none;
   }
 }
 
-/* Small Phones (375px–390px) */
-@media (max-width: 390px) {
+/* 430px (e.g. iPhone 14/15/16 Pro Max, Plus, Galaxy Ultra) */
+@media (max-width: 430px) {
   .hero-cinematic-stage {
-    padding-top: 85px;
-    padding-bottom: 35px;
-    padding-inline: 14px;
+    padding-top: clamp(130px, 16vh, 165px);
+    padding-bottom: clamp(55px, 7vh, 80px);
+    padding-inline: 20px;
   }
 
   .hero-cinematic-img {
-    object-position: 50% 10%;
+    object-position: center 16%;
   }
 
+  .hero-centerpiece {
+    /* 430px: line 1 needs ~391px; container gives ~410px ✓ */
+    width: min(calc(100% - 16px), 414px);
+  }
+
+  /* Navbar → eyebrow: ~30px, Eyebrow → headline: 13px */
+  .hero-eyebrow {
+    gap: 8px;
+    margin-bottom: 13px;
+  }
+
+  .hero-eyebrow::before {
+    width: 14px;
+    height: 1.5px;
+  }
+
+  .eyebrow-text {
+    font-size: 12px;
+  }
+
+  /* Headline → paragraph: 16px */
   .hero-main-title {
-    font-size: 1.55rem;
-    line-height: 1.62;
-    max-width: 92vw;
+    font-size: 26px;
+    line-height: 1.55;
+    margin-bottom: 16px;
   }
 
+  /* Paragraph → CTA: 22px */
   .hero-supporting-copy {
-    font-size: 0.84rem;
-    max-width: 90vw;
+    font-size: 13.5px;
+    line-height: 1.76;
+    max-width: 330px;
     margin-bottom: 22px;
   }
 
   .hero-cta-btn {
+    min-height: 48px;
+    padding: 12px 28px;
+    font-size: 14px;
+    gap: 12px;
+    max-width: 250px;
+  }
+}
+
+/* 390px (e.g. iPhone 12/13/14/15/16 Pro, standard phones) */
+@media (max-width: 390px) {
+  .hero-cinematic-stage {
+    padding-top: clamp(120px, 15vh, 155px);
+    padding-bottom: clamp(50px, 7vh, 75px);
+    padding-inline: 18px;
+  }
+
+  .hero-cinematic-img {
+    object-position: center 16%;
+  }
+
+  .hero-centerpiece {
+    /* 390px: line 1 needs ~362px; container gives ~370px ✓ */
+    width: min(calc(100% - 16px), 374px);
+  }
+
+  /* 390px: font reduced 25→24px (1px) so 24px×29units×0.52 = 362px fits in 374px */
+  .hero-main-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  /* Paragraph → CTA: 20px */
+  .hero-supporting-copy {
+    font-size: 13px;
+    line-height: 1.74;
+    max-width: 315px;
+    margin-bottom: 20px;
+  }
+
+  .hero-cta-btn {
+    min-height: 46px;
     padding: 11px 26px;
-    font-size: 0.88rem;
+    font-size: 13.5px;
+    gap: 11px;
+    max-width: 240px;
+  }
+}
+
+/* 375px (e.g. iPhone SE, iPhone 7/8/X/XS) */
+@media (max-width: 375px) {
+  .hero-cinematic-stage {
+    padding-top: clamp(115px, 14.5vh, 148px);
+    padding-bottom: clamp(48px, 6.5vh, 70px);
+    padding-inline: 16px;
+  }
+
+  .hero-cinematic-img {
+    object-position: center 17%;
+  }
+
+  .hero-centerpiece {
+    /* 375px: line 1 needs ~347px; container gives ~355px ✓ */
+    width: min(calc(100% - 16px), 359px);
+  }
+
+  /* 375px: font reduced 24→23px (1px) so 23px×29units×0.52 = 347px fits in 359px */
+  .hero-main-title {
+    font-size: 23px;
+    margin-bottom: 14px;
+  }
+
+  /* Paragraph → CTA: 19px */
+  .hero-supporting-copy {
+    font-size: 12.5px;
+    line-height: 1.72;
+    max-width: 295px;
+    margin-bottom: 19px;
+  }
+
+  .hero-cta-btn {
+    min-height: 46px;
+    padding: 11px 24px;
+    font-size: 13px;
+    gap: 10px;
+    max-width: 230px;
+  }
+}
+
+/* 360px (e.g. compact Android devices & small screens) */
+@media (max-width: 360px) {
+  .hero-cinematic-stage {
+    padding-top: clamp(110px, 14vh, 140px);
+    padding-bottom: clamp(45px, 6vh, 65px);
+    padding-inline: 14px;
+  }
+
+  .hero-cinematic-img {
+    object-position: center 17%;
+  }
+
+  .hero-centerpiece {
+    /* 360px: line 1 needs ~332px; container gives ~344px ✓ */
+    width: min(calc(100% - 12px), 348px);
+  }
+
+  /* Navbar → eyebrow: ~24px, Eyebrow → headline: 10px */
+  .hero-eyebrow {
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+
+  .hero-eyebrow::before {
+    width: 11px;
+    height: 1.5px;
+  }
+
+  .eyebrow-text {
+    font-size: 10.5px;
+  }
+
+  /* Headline → paragraph: 14px */
+  .hero-main-title {
+    font-size: 22px;
+    line-height: 1.55;
+    margin-bottom: 14px;
+  }
+
+  /* Paragraph → CTA: 18px */
+  .hero-supporting-copy {
+    font-size: 12px;
+    line-height: 1.70;
+    max-width: 280px;
+    margin-bottom: 18px;
+  }
+
+  .hero-cta-btn {
+    min-height: 44px;
+    padding: 10px 22px;
+    font-size: 12.5px;
+    max-width: 220px;
+    gap: 9px;
   }
 }

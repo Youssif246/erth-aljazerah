@@ -27,73 +27,73 @@ export class PreviousWorkComponent implements AfterViewInit, OnDestroy {
     {
       id: 'work-1',
       number: '٠١',
-      title: 'الحارة التراثية الحية',
+      title: 'استعراض بالخيالة وسط الاحتفالات',
       category: 'بيئات حية وسينوغرافيا',
       description: 'إعادة إحياء الحارات السعودية القديمة بكامل تفاصيلها المعمارية ودكاكينها وحركتها التفاعلية.',
-      image: '/assets/experiences/experience1.png'
+      image: '/assets/experiences/experience1.webp'
     },
     {
       id: 'work-2',
       number: '٠٢',
-      title: 'السوق القديم والعملات التاريخية',
+      title: 'سوق للحرف والمنتجات السعودية',
       category: 'مهن ومقايضة تراثية',
       description: 'تجربة بيع وشراء حية بالعملات القديمة وأركان المهن التقليدية وشريان الحياة الاقتصادية التاريخية.',
-      image: '/assets/experiences/experience2.png'
+      image: '/assets/experiences/experience2.webp'
     },
     {
       id: 'work-3',
       number: '٠٣',
-      title: 'مجلس الملك عبدالعزيز',
+      title: 'سيارات كلاسيكية تضفي طابعًا مميزًا',
       category: 'مجالس سيادية وبطولية',
       description: 'تجربة سردية وتمثيلية للمناسبات الوطنية الكبرى بمراعاة أدق التفاصيل التاريخية في المحتوى والضيافة.',
-      image: '/assets/experiences/experience3.png'
+      image: '/assets/experiences/experience3.webp'
     },
     {
       id: 'work-4',
       number: '٠٤',
-      title: 'مجلس الإمام محمد بن سعود',
+      title: 'لحظات مرحة للأطفال والصغار',
       category: 'عمق الدولة والتأسيس',
       description: 'بناء مجلس تاريخي متكامل يجسد حقبة التأسيس الأولى في الدرعية ويجمع الراوي وشخصيات الحقبة.',
-      image: '/assets/experiences/experience4.png'
+      image: '/assets/experiences/experience4.webp'
     },
     {
       id: 'work-5',
       number: '٠٥',
-      title: 'قرية الحرفيين والعروض التفاعلية',
+      title: 'موروث حي في مشهد احتفالي',
       category: 'حِرف وأيدٍ ماهرة',
       description: 'قرية متكاملة يشارك فيها أمهر الحرفيين والحرفيات من شتى المناطق مع ورش حية تتيح تجربة الصنعة.',
-      image: '/assets/experiences/experience5.png'
+      image: '/assets/experiences/experience5.webp'
     },
     {
       id: 'work-6',
       number: '٠٦',
-      title: 'المسرح التراثي المتجول',
+      title: 'سوق يعكس الحرف والهوية السعودية',
       category: 'عروض أدائية وارتجال',
       description: 'شخصيات تاريخية ورواة ومؤدون يجوبون ممرات الفعالية وأزقتها متفاعلين مباشرة مع الجمهور.',
-      image: '/assets/experiences/experience6.png'
+      image: '/assets/experiences/experience6.webp'
     },
     {
       id: 'work-7',
       number: '٠٧',
-      title: 'القوافل والصقور والخيل والإبل',
+      title: 'أزياء ومقتنيات تعكس الهوية',
       category: 'هيبة الصحراء والفروسية',
       description: 'حضور مهيب لعناصر المشهد البدوي والخيالة وصقاري الجزيرة، مجسدين كرم الضيافة وعراقة الفروسية.',
-      image: '/assets/experiences/experience7.png'
+      image: '/assets/experiences/experience7.webp'
     },
     {
       id: 'work-8',
       number: '٠٨',
-      title: 'تجارب التاريخ المؤسسي الحي',
+      title: 'وجهة تجمع التراث والتسوق',
       category: 'ذاكرة وطنية ومؤسسية',
       description: 'تحويل مسيرة وإنجازات الكيان إلى قصة حية مصممة خصيصاً ترتبط بذاكرته وتاريخه الوطني.',
-      image: '/assets/experiences/experience8.png'
+      image: '/assets/experiences/experience8.webp'
     }
   ];
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
     private cdr: ChangeDetectorRef
-  ) {}
+  ) { }
 
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId) && this.portfolioSwiper) {

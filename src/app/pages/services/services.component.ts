@@ -35,7 +35,7 @@ export class ServicesComponent {
         'إشراف ميداني وتنفيذي متكامل من الألف إلى الياء'
       ],
       operationalHighlights: 'تصميم خاص بالعميل من الصفر بحسب القصة والهدف والموقع والجمهور.',
-      image: '/assets/services/تصميم_وإنتاج_التجارب_التراثية_المتكاملة.png'
+      image: '/assets/services/تصميم_وإنتاج_التجارب_التراثية_المتكاملة.webp'
     },
     {
       number: '٠٢',
@@ -50,7 +50,7 @@ export class ServicesComponent {
         'المؤتمرات المصاحبة للمواسم الكبرى'
       ],
       operationalHighlights: 'تنفيذ احترافي يراعي البرتوكول والهوية الوطنية والعمق الثقافي.',
-      image: '/assets/services/الفعاليات_والمناسبات_الوطنية_والثقافية.png'
+      image: '/assets/services/الفعاليات_والمناسبات_الوطنية_والثقافية.webp'
     },
     {
       number: '٠٣',
@@ -65,7 +65,7 @@ export class ServicesComponent {
         'ورش تفاعلية تتيح للزوار ممارسة الصنعة بأيديهم'
       ],
       operationalHighlights: 'أكبر شبكة وطنية مرخصة لحرفيي وحرفيات مناطق المملكة العربية السعودية.',
-      image: '/assets/services/الحرفيون_والحِرف_التراثية.png'
+      image: '/assets/services/الحرفيون_والحِرف_التراثية.webp'
     },
     {
       number: '٠٤',
@@ -80,7 +80,7 @@ export class ServicesComponent {
         'الفنون البحرية وفنون المنطقة الشرقية والشمالية'
       ],
       operationalHighlights: 'تنسيق محكم يضمن أصالة اللباس، وضبط الإيقاع، وتوافق الفن مع هوية المناسبة.',
-      image: '/assets/services/الفنون_والفرق_الشعبية.png'
+      image: '/assets/services/الفنون_والفرق_الشعبية.webp'
     },
     {
       number: '٠٥',
@@ -95,7 +95,7 @@ export class ServicesComponent {
         'انسجام كامل مع السينوغرافيا والمؤثرات الصوتية والضوئية'
       ],
       operationalHighlights: 'تعبير درامي ملحمي يضفي هيبة بصرية وفنية على المنصات والمسارح الكبرى.',
-      image: '/assets/services/الفرق_الاستعراضية_الوطنية.png'
+      image: '/assets/services/الفرق_الاستعراضية_الوطنية.webp'
     },
     {
       number: '٠٦',
@@ -110,7 +110,7 @@ export class ServicesComponent {
         'إشراف كامل على البروفات وتجهيز خشبة المسرح'
       ],
       operationalHighlights: 'إنتاج متكامل يُصنع خصيصاً للجهة الراعية ليبقى وثيقة فنية خالدة.',
-      image: '/assets/services/الأوبريتات_الوطنية.png'
+      image: '/assets/services/الأوبريتات_الوطنية.webp'
     },
     {
       number: '٠٧',
@@ -125,7 +125,7 @@ export class ServicesComponent {
         'أزياء تاريخية ومتقنة ومصممة بدقة زمانية ومكانية'
       ],
       operationalHighlights: 'أداء تفاعلي حي يكسر الحواجز ويجعل الزائر جزءاً من المشهد التراثي.',
-      image: '/assets/services/الشخصيات_التراثية_والتمثيل_التاريخي_الحي.png'
+      image: '/assets/services/الشخصيات_التراثية_والتمثيل_التاريخي_الحي.webp'
     },
     {
       number: '٠٨',
@@ -140,7 +140,7 @@ export class ServicesComponent {
         'كرم الضيافة السعودية الأصيلة: القهوة، التمور، البخور'
       ],
       operationalHighlights: 'مجلس ينبض بالحياة والسوالف التراثية والشعر الأصيل على مدار ساعات الفعالية.',
-      image: '/assets/services/المجالس_التاريخية_الحية.png'
+      image: '/assets/services/المجالس_التاريخية_الحية.webp'
     },
     {
       number: '٠٩',
@@ -155,7 +155,7 @@ export class ServicesComponent {
         'تجارب تفاعلية تجذب العائلات والأطفال'
       ],
       operationalHighlights: 'تحويل كامل أرض الفعالية إلى مسرح مفتوح بلا جدران أو فواصل.',
-      image: '/assets/experiences/experience6.png'
+      image: '/assets/services/المسرح_المتجول_والعروض_الحية.webp'
     },
     {
       number: '١٠',
@@ -170,7 +170,7 @@ export class ServicesComponent {
         'استخدام مواد أصيلة: طين، حجر، خشب، وسعف'
       ],
       operationalHighlights: 'بيئات واقعية تحترم الخصائص المعمارية لكل منطقة مع متانة السلامة والتشغيل.',
-      image: '/assets/services/تصميم وتنفيذ_الديكورات_والبيئات_التراثية.png'
+      image: '/assets/services/تصميم وتنفيذ_الديكورات_والبيئات_التراثية.webp'
     },
     {
       number: '١١',
@@ -185,7 +185,7 @@ export class ServicesComponent {
         'رعاية بيطرية كاملة واشتراطات أمان وسلامة صارمة'
       ],
       operationalHighlights: 'إدارة تشغيلية دقيقة تضمن سلامة الزوار وعافية الحيوانات طوال مدة الحدث.',
-      image: '/assets/services/الحيوانات_المرتبطة_بالتجربة_التراثية.png'
+      image: '/assets/services/الحيوانات_المرتبطة_بالتجربة_التراثية.webp'
     },
     {
       number: '١٢',
@@ -200,7 +200,7 @@ export class ServicesComponent {
         'حكواتي الأطفال وسرد القصص الشعبية الملهمة'
       ],
       operationalHighlights: 'غرس حب التراث والاعتزاز بالهوية الوطنية في قلوب الأجيال ببهجة ومتعة.',
-      image: '/assets/services/تجارب_الأطفال_والألعاب_الشعبية.png'
+      image: '/assets/services/تجارب_الأطفال_والألعاب_الشعبية.webp'
     }
   ];
 

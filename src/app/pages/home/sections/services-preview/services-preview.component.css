@@ -157,19 +157,39 @@
   z-index: 2;
 }
 
-/* Elegant Editorial Service Number — no heavy black boxes */
+/* High-Visibility Refined Heritage Service Number Badge */
 .card-meta {
   display: flex;
   align-items: center;
 }
 
 .service-card-num {
-  font-family: monospace;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--ochre);
-  letter-spacing: 0.05em;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-primary, 'IBM Plex Sans Arabic', sans-serif);
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #FDF5E6;
+  background: rgba(16, 15, 13, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 6px 14px;
+  min-width: 44px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(221, 168, 98, 0.6);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45), 0 0 10px rgba(221, 168, 98, 0.2);
+  letter-spacing: 0.04em;
+  transition: all 0.35s ease;
+}
+
+.service-cinematic-card:hover .service-card-num {
+  background: rgba(16, 15, 13, 0.96);
+  border-color: rgba(221, 168, 98, 0.9);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 16px rgba(221, 168, 98, 0.35);
 }
 
 /* Title, Description & CTA in Bottom Area */

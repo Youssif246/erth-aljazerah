@@ -37,7 +37,7 @@ export class ServicesPreviewComponent implements AfterViewInit, OnDestroy {
       fullDesc: 'ابتكار الفكرة، بناء القصة، وتصميم رحلة الزائر، واختيار عناصر التجربة، ثم الإشراف على التنفيذ الميداني الكامل لضمان اندماج الحكاية مع المكان والوجدان.',
       features: ['بناء قصة متكاملة ومحكمة', 'تصميم رحلة الزائر من الصفر', 'إشراف ميداني وتنفيذ كامل'],
       tag: 'التجربة الشاملة',
-      image: '/assets/services/تصميم_وإنتاج_التجارب_التراثية_المتكاملة.png'
+      image: '/assets/services/تصميم_وإنتاج_التجارب_التراثية_المتكاملة.webp'
     },
     {
       id: 'national-events',
@@ -47,7 +47,7 @@ export class ServicesPreviewComponent implements AfterViewInit, OnDestroy {
       fullDesc: 'تصميم وتنفيذ الفعاليات والاحتفالات والمعارض والملتقيات التي ترتبط بالهوية الوطنية والموروث والثقافة وفق طابع سعودي أصيل يعبر عن فخر المناسبة.',
       features: ['احتفالات الأيام والمناسبات الوطنية', 'المعارض الثقافية المتخصصة', 'أجنحة الاستقبال التراثية الرفيعة'],
       tag: 'المناسبات الكبرى',
-      image: '/assets/services/الفعاليات_والمناسبات_الوطنية_والثقافية.png'
+      image: '/assets/services/الفعاليات_والمناسبات_الوطنية_والثقافية.webp'
     },
     {
       id: 'craftsmen',
@@ -57,7 +57,7 @@ export class ServicesPreviewComponent implements AfterViewInit, OnDestroy {
       fullDesc: 'شبكة حية تضم أكثر من 100 حرفي وحرفية في تخصصات تراثية نادرة، لتقديم العروض الحية والورش التفاعلية والقرى الحرفية المباشرة أمام الجمهور.',
       features: ['+100 حرفي وحرفية معتمدين', 'ورش عمل تفاعلية حية مع الجمهور', 'قرى وأسواق حرفية متكاملة'],
       tag: 'حِرف حية',
-      image: '/assets/services/الحرفيون_والحِرف_التراثية.png'
+      image: '/assets/services/الحرفيون_والحِرف_التراثية.webp'
     },
     {
       id: 'folklore-arts',
@@ -67,7 +67,7 @@ export class ServicesPreviewComponent implements AfterViewInit, OnDestroy {
       fullDesc: 'تعاون واتفاقيات وتواصل مباشر مع أكثر من 50 فرقة شعبية مرخصة لتقديم مختلف الألوان والفنون التقليدية التي تعبّر عن أصالة كل بيئة جغرافية.',
       features: ['+50 فرقة شعبية معتمدة', 'تغطية لكافة مناطق وفنون المملكة', 'عروض حية مبهجة ومنسقة'],
       tag: 'فنون الجزيرة',
-      image: '/assets/services/الفنون_والفرق_الشعبية.png'
+      image: '/assets/services/الفنون_والفرق_الشعبية.webp'
     },
     {
       id: 'national-troupes',
@@ -77,7 +77,7 @@ export class ServicesPreviewComponent implements AfterViewInit, OnDestroy {
       fullDesc: 'فرق متخصصة في تقديم اللوحات والاستعراضات الوطنية والمسرحية المعاصرة تختلف من حيث التكوين الحركي والكوريغرافيا والإخراج المسرحي.',
       features: ['كوريغرافيا وطنية حركية مدروسة', 'أزياء تاريخية واستعراضية مصممة خصيصاً', 'انسجام مع السينوغرافيا والمؤثرات'],
       tag: 'استعراض وطني',
-      image: '/assets/services/الفرق_الاستعراضية_الوطنية.png'
+      image: '/assets/services/الفرق_الاستعراضية_الوطنية.webp'
     },
     {
       id: 'national-operettas',
@@ -87,7 +87,7 @@ export class ServicesPreviewComponent implements AfterViewInit, OnDestroy {
       fullDesc: 'تنفيذ الأوبريت من الفكرة حسب طلب الجهة، إلى كتابة القصيدة والتلحين التراثي، وتصميم اللوحات الغنائية والاستعراضية، وصولاً إلى المسرح.',
       features: ['تأليف وتلحين شعري مخصص', 'فرق استعراضية وطنية متمرسة', 'إخراج سينوغرافي مسرحي متكامل'],
       tag: 'إنتاج ملحمي',
-      image: '/assets/services/الأوبريتات_الوطنية.png'
+      image: '/assets/services/الأوبريتات_الوطنية.webp'
     },
     {
       id: 'heritage-characters',
@@ -97,7 +97,7 @@ export class ServicesPreviewComponent implements AfterViewInit, OnDestroy {
       fullDesc: 'توفير وإدارة شخصيات تمثل حقباً تاريخية ومجتمعية مثل الراوي والشاعر والمرحب والعساس وشخصيات المجالس والأسواق والمهن القديمة.',
       features: ['رواة معتمدون وقصاصون تاريخيون', 'شخصيات الحارة والأسواق القديمة', 'أزياء موثقة زمانياً ومكانياً'],
       tag: 'تمثيل حي',
-      image: '/assets/services/الشخصيات_التراثية_والتمثيل_التاريخي_الحي.png'
+      image: '/assets/services/الشخصيات_التراثية_والتمثيل_التاريخي_الحي.webp'
     },
     {
       id: 'historical-majlis',
@@ -107,7 +107,7 @@ export class ServicesPreviewComponent implements AfterViewInit, OnDestroy {
       fullDesc: 'بناء مجلس تاريخي متكامل يجمع الراوي والشاعر والشخصيات والمشاهد التمثيلية المباشرة لتتحول المجالس إلى تجربة حية مستمرة تنبض بالضيافة.',
       features: ['مجلس الملك عبدالعزيز ومجالس التأسيس', 'أزياء تاريخية موثقة بدقة', 'رواة وشعراء أصيلون'],
       tag: 'سرد حي',
-      image: '/assets/services/المجالس_التاريخية_الحية.png'
+      image: '/assets/services/المجالس_التاريخية_الحية.webp'
     },
     {
       id: 'wandering-theatre',
@@ -117,7 +117,7 @@ export class ServicesPreviewComponent implements AfterViewInit, OnDestroy {
       fullDesc: 'عروض وشخصيات حية تتحرك بين ممرات الفعالية وأزقتها وتتفاعل مباشرة مع الجمهور بروح عفوية، بدلاً من حصر التجربة في المسارح الثابتة.',
       features: ['مشاهد درامية مباغتة بين الزوار', 'منادو الأسواق والباعة المتجولون', 'مواكب استعراضية بين الساحات'],
       tag: 'عروض حية',
-      image: '/assets/experiences/experience6.png'
+      image: '/assets/services/المسرح_المتجول_والعروض_الحية.webp'
     },
     {
       id: 'heritage-decor',
@@ -127,7 +127,7 @@ export class ServicesPreviewComponent implements AfterViewInit, OnDestroy {
       fullDesc: 'تصميم وبناء بيئات مخصصة من الصفر مثل الحارات والأسواق والمجالس والبيوت والدكاكين والبوابات والساحات المستوحاة من عمارة مناطق المملكة.',
       features: ['حارات نجدية وحجازية وجنوبية كاملة', 'أبواب وبوابات محاكية للأصل', 'مواد طبيعية: طين، حجر، وخشب أثل'],
       tag: 'بناء سينوغرافي',
-      image: '/assets/services/تصميم وتنفيذ_الديكورات_والبيئات_التراثية.png'
+      image: '/assets/services/تصميم وتنفيذ_الديكورات_والبيئات_التراثية.webp'
     },
     {
       id: 'heritage-animals',
@@ -137,7 +137,7 @@ export class ServicesPreviewComponent implements AfterViewInit, OnDestroy {
       fullDesc: 'توفير وإدارة الحيوانات المرتبطة بالبادية والموروث العربي مثل الصقور العربية الأصيلة، والخيول، والهجانة والإبل المحملة تحت إشراف كامل.',
       features: ['صقارون مرخصون وصقور حرة', 'خيول عربية أصيلة مع فرسانها', 'قوافل الهجانة في ساحات الفعالية'],
       tag: 'فروسية وأصالة',
-      image: '/assets/services/الحيوانات_المرتبطة_بالتجربة_التراثية.png'
+      image: '/assets/services/الحيوانات_المرتبطة_بالتجربة_التراثية.webp'
     },
     {
       id: 'traditional-games',
@@ -147,7 +147,7 @@ export class ServicesPreviewComponent implements AfterViewInit, OnDestroy {
       fullDesc: 'إشراك الأطفال في الاستقبالات والألعاب القديمة والمشاهد الحية، وتصميم تجارب وأجواء تراثية مبهجة تغرس محبة الهوية والانتماء في وجدان الأجيال.',
       features: ['ألعاب الحارة الشعبية التفاعلية', 'أزياء تراثية مخصصة للأطفال', 'ورش حِرف مبسطة وسرد قصصي'],
       tag: 'أجيال وعائلة',
-      image: '/assets/services/تجارب_الأطفال_والألعاب_الشعبية.png'
+      image: '/assets/services/تجارب_الأطفال_والألعاب_الشعبية.webp'
     }
   ];
 

@@ -78,17 +78,28 @@
   top: 14px;
   right: 14px;
   font-family: var(--font-primary, 'IBM Plex Sans Arabic', sans-serif);
-  font-size: 1.05rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 800;
   padding: 6px 14px;
-  background: rgba(20, 19, 17, 0.88);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  color: var(--ochre-light, #DDA862);
+  min-width: 44px;
+  text-align: center;
+  background: rgba(16, 15, 13, 0.90);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #FDF5E6;
   border-radius: 8px;
-  border: 1px solid rgba(193, 139, 68, 0.4);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  border: 1.5px solid rgba(221, 168, 98, 0.6);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45), 0 0 10px rgba(221, 168, 98, 0.2);
   line-height: 1;
+  transition: all 0.35s ease;
+}
+
+.service-card:hover .service-num-badge {
+  background: rgba(16, 15, 13, 0.96);
+  border-color: rgba(221, 168, 98, 0.9);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 16px rgba(221, 168, 98, 0.35);
 }
 
 /* Badges Row */

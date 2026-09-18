@@ -32,7 +32,7 @@
 /* Main Editorial Grid (Desktop: 4 columns with strong brand anchor on right in RTL) */
 .footer-editorial-grid {
   display: grid;
-  grid-template-columns: 2fr 1.1fr 1.2fr 1.3fr;
+  grid-template-columns: 2fr 1.2fr 1.5fr;
   gap: clamp(32px, 4.5vw, 64px);
   padding-bottom: clamp(48px, 6vw, 72px);
 }
@@ -217,12 +217,12 @@
 
 @media (max-width: 1040px) {
   .footer-editorial-grid {
-    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     gap: 36px;
   }
 
   .institutional-column {
-    grid-column: span 3;
+    grid-column: span 2;
   }
 }
 
