@@ -1,0 +1,225 @@
+/* ==========================================================================
+   Previous Work ("أعمالنا السابقة") — Dark Heritage Portfolio Showcase
+   ========================================================================== */
+
+.previous-work-movement {
+  position: relative;
+  background-color: var(--charcoal-deep);
+  color: var(--ink-light);
+  border-top: 1px solid rgba(250, 247, 240, 0.08);
+  border-bottom: 1px solid rgba(250, 247, 240, 0.08);
+  padding-block: clamp(64px, 8vw, 100px);
+  overflow: hidden;
+}
+
+/* Header & Controls */
+.work-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+  margin-bottom: clamp(32px, 4.5vw, 48px);
+}
+
+.header-main-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 780px;
+}
+
+.work-headline {
+  font-size: clamp(2rem, 3.2vw, 3.2rem);
+  font-weight: 700;
+  color: var(--ivory);
+  line-height: 1.25;
+  margin: 0;
+}
+
+.work-lead {
+  font-size: clamp(0.95rem, 1.2vw, 1.12rem);
+  color: var(--ink-light-muted);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* Minimalist Architectural Controls */
+.work-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 10;
+}
+
+.work-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(250, 247, 240, 0.06);
+  border: 1px solid rgba(250, 247, 240, 0.15);
+  color: var(--ivory);
+  cursor: pointer;
+  pointer-events: auto;
+  user-select: none;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.work-nav-btn:hover {
+  background: var(--ochre);
+  border-color: var(--ochre);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.work-nav-btn:active {
+  transform: translateY(0);
+}
+
+/* Slider Track */
+.work-slider-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.work-portfolio-swiper {
+  width: 100%;
+  overflow: hidden;
+  padding-block: 8px;
+}
+
+.work-portfolio-swiper .swiper-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+.work-portfolio-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+  box-sizing: border-box;
+}
+
+/* Photographic Exhibition Panel */
+.portfolio-exhibition-panel {
+  position: relative;
+  width: 100%;
+  height: clamp(420px, 48vh, 500px);
+  border-radius: clamp(26px, 2.5vw, 32px);
+  overflow: hidden;
+  background-color: var(--charcoal-surface);
+  border: 1px solid rgba(250, 247, 240, 0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
+}
+
+.portfolio-exhibition-panel:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 52px rgba(0, 0, 0, 0.45);
+  border-color: rgba(193, 139, 68, 0.35);
+}
+
+/* Real Photography Canvas */
+.panel-media-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.panel-real-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.portfolio-exhibition-panel:hover .panel-real-photo {
+  transform: scale(1.04);
+}
+
+/* Directional Dark Scrim */
+.panel-directional-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(14, 13, 12, 0.88) 0%,
+    rgba(14, 13, 12, 0.45) 28%,
+    rgba(14, 13, 12, 0.08) 55%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* Content Overlay Layer — Title Only at Bottom */
+.panel-content-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(22px, 2.5vw, 32px);
+  z-index: 2;
+}
+
+/* Bottom Text Block */
+.panel-text-block {
+  width: 100%;
+}
+
+.panel-title {
+  font-size: clamp(1.25rem, 1.5vw, 1.55rem);
+  font-weight: 700;
+  color: var(--ivory);
+  line-height: 1.35;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .portfolio-exhibition-panel {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .work-header {
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .work-nav-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .work-header {
+    margin-bottom: 20px;
+  }
+
+  .portfolio-exhibition-panel {
+    height: 380px;
+    border-radius: 20px;
+  }
+
+  .panel-content-overlay {
+    padding: 20px;
+  }
+
+  .panel-title {
+    font-size: 1.25rem;
+  }
+}

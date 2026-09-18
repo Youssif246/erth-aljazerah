@@ -1,0 +1,207 @@
+.experiences-exhibition-movement {
+  position: relative;
+  background-color: var(--charcoal-deep);
+  color: var(--ink-light);
+  border-top: 1px solid rgba(250, 247, 240, 0.08);
+  overflow: hidden;
+}
+
+.exhibition-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: clamp(40px, 5vw, 60px);
+}
+
+.exhibition-title {
+  font-size: clamp(2rem, 3.8vw, 3.6rem);
+  font-weight: 700;
+  color: var(--ink-light);
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+.exhibition-lead {
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  color: var(--ink-light-muted);
+  line-height: 1.8;
+  max-width: 680px;
+}
+
+.exhibition-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.exhibition-nav-btn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--ink-light);
+  border: 1px solid rgba(250, 247, 240, 0.2);
+  border-radius: 1px;
+  cursor: pointer;
+  transition: var(--trans-smooth);
+}
+
+.exhibition-nav-btn:hover {
+  border-color: var(--ochre-light);
+  color: var(--ochre-light);
+  background: rgba(193, 139, 68, 0.1);
+}
+
+/* Exhibition Carousel Wrapper (Full-width momentum) */
+.exhibition-carousel-wrap {
+  width: 100%;
+  overflow: visible;
+  padding-inline: clamp(24px, 5vw, 64px);
+  margin-bottom: clamp(48px, 6vw, 72px);
+}
+
+.experiences-swiper {
+  overflow: visible;
+}
+
+.exhibition-portal-slide {
+  position: relative;
+  height: clamp(420px, 54vh, 560px);
+  border-radius: 1px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(250, 247, 240, 0.1);
+  transition: border-color 0.4s ease;
+}
+
+.exhibition-portal-slide:hover {
+  border-color: rgba(193, 139, 68, 0.4);
+}
+
+.portal-img-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.portal-real-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.exhibition-portal-slide:hover .portal-real-img {
+  transform: scale(1.05);
+}
+
+.portal-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(20, 19, 17, 0.96) 0%, rgba(20, 19, 17, 0.5) 50%, rgba(20, 19, 17, 0.15) 100%);
+  pointer-events: none;
+}
+
+/* Content Overlay */
+.portal-content-overlay {
+  position: relative;
+  z-index: 2;
+  padding: clamp(24px, 3.5vw, 36px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.portal-badge-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.portal-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 3px 10px;
+  background: var(--ochre);
+  color: #FFFFFF;
+  border-radius: 1px;
+}
+
+.portal-num {
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: var(--ochre-light);
+}
+
+.portal-category {
+  font-size: 0.78rem;
+  color: var(--ochre-light);
+  letter-spacing: 0.05em;
+}
+
+.portal-title {
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-weight: 700;
+  color: var(--ink-light);
+  line-height: 1.25;
+}
+
+.portal-desc {
+  font-size: 0.92rem;
+  color: var(--ink-light-muted);
+  line-height: 1.65;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.portal-highlight-tag {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(250, 247, 240, 0.1);
+  margin-top: 6px;
+}
+
+.h-bullet {
+  color: var(--ochre);
+  font-size: 0.65rem;
+}
+
+.h-text {
+  font-size: 0.82rem;
+  color: var(--ink-light-subtle);
+}
+
+/* Bottom Invitation */
+.exhibition-bottom-invitation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 24px 32px;
+  background: var(--charcoal-surface);
+  border: 1px solid rgba(193, 139, 68, 0.2);
+  border-radius: 1px;
+  font-size: 1.05rem;
+  color: var(--ink-light-muted);
+}
+
+@media (max-width: 1024px) {
+  .exhibition-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

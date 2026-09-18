@@ -1,0 +1,138 @@
+<header class="site-header" [class.scrolled]="isScrolled() || isLightPage()">
+  <div class="container header-inner">
+    <!-- Brand Architectural Anchor -->
+    <a routerLink="/" class="brand-link" (click)="closeMobileMenu()">
+      <div class="brand-logo-frame">
+        <img src="/logo.png" alt="شعار إرث الجزيرة" class="brand-logo-img" />
+      </div>
+      <div class="brand-meta">
+        <span class="brand-name">إرث الجزيرة</span>
+      </div>
+    </a>
+
+    <!-- Editorial Desktop Navigation -->
+    <nav class="desktop-nav" aria-label="القائمة الرئيسية">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-anchor">
+        <span class="nav-idx">٠١</span>
+        <span class="nav-txt">الرئيسية</span>
+      </a>
+      <a routerLink="/about" routerLinkActive="active" class="nav-anchor">
+        <span class="nav-idx">٠٢</span>
+        <span class="nav-txt">عن العلامة</span>
+      </a>
+      <a routerLink="/services" routerLinkActive="active" class="nav-anchor">
+        <span class="nav-idx">٠٣</span>
+        <span class="nav-txt">دليل الخدمات</span>
+      </a>
+      <a routerLink="/contact" routerLinkActive="active" class="nav-anchor">
+        <span class="nav-idx">٠٤</span>
+        <span class="nav-txt">تواصل معنا</span>
+      </a>
+    </nav>
+
+    <!-- Header Action & Mobile Trigger -->
+    <div class="header-action-group">
+      <a routerLink="/contact" class="btn-header-action">
+        <span>طلب تجربة خاصة</span>
+        <span class="action-icon">
+          <i class="fa-solid fa-arrow-left"></i>
+        </span>
+      </a>
+
+      <!-- Minimalist Hamburger -->
+      <button class="mobile-trigger" (click)="toggleMobileMenu()" [attr.aria-expanded]="mobileMenuOpen()"
+        aria-label="تبديل القائمة">
+        <span class="bar top" [class.open]="mobileMenuOpen()"></span>
+        <span class="bar bottom" [class.open]="mobileMenuOpen()"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Fullscreen Immersive Luxury Mobile Drawer (Independent from header containing block) -->
+<div class="mobile-overlay" [class.open]="mobileMenuOpen()" role="dialog" aria-modal="true" aria-label="قائمة التصفح للهاتف">
+  <div class="overlay-backdrop" (click)="closeMobileMenu()"></div>
+
+  <div class="drawer-panel">
+    <!-- Drawer Top Bar -->
+    <div class="drawer-top-bar">
+      <a routerLink="/" class="drawer-brand" (click)="closeMobileMenu()">
+        <div class="drawer-logo-frame">
+          <img src="/logo.png" alt="شعار إرث الجزيرة" class="drawer-logo-img" />
+        </div>
+        <div class="drawer-brand-text">
+          <span class="drawer-title">إرث الجزيرة</span>
+          <span class="drawer-subtitle">للتجارب والفعاليات التراثية</span>
+        </div>
+      </a>
+
+      <button class="drawer-close-btn" (click)="closeMobileMenu()" aria-label="إغلاق القائمة">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Navigation List with Staggered Luxury Cards -->
+    <nav class="drawer-nav-list" aria-label="روابط القائمة">
+      <a routerLink="/" (click)="closeMobileMenu()" class="drawer-nav-card" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}">
+        <span class="d-num">٠١</span>
+        <div class="d-info">
+          <span class="d-title">الرئيسية</span>
+          <span class="d-desc">الواجهة الرئيسية واستعراض الإرث</span>
+        </div>
+        <span class="d-arrow"><i class="fa-solid fa-arrow-left"></i></span>
+      </a>
+
+      <a routerLink="/about" (click)="closeMobileMenu()" class="drawer-nav-card" routerLinkActive="active">
+        <span class="d-num">٠٢</span>
+        <div class="d-info">
+          <span class="d-title">عن العلامة وفلسفتها</span>
+          <span class="d-desc">هويتنا، رؤيتنا، والأهداف الوطنية</span>
+        </div>
+        <span class="d-arrow"><i class="fa-solid fa-arrow-left"></i></span>
+      </a>
+
+      <a routerLink="/services" (click)="closeMobileMenu()" class="drawer-nav-card" routerLinkActive="active">
+        <span class="d-num">٠٣</span>
+        <div class="d-info">
+          <span class="d-title">دليل الخدمات والتجارب</span>
+          <span class="d-desc">الحلول التراثية والقرى الحرفية</span>
+        </div>
+        <span class="d-arrow"><i class="fa-solid fa-arrow-left"></i></span>
+      </a>
+
+      <a routerLink="/contact" (click)="closeMobileMenu()" class="drawer-nav-card" routerLinkActive="active">
+        <span class="d-num">٠٤</span>
+        <div class="d-info">
+          <span class="d-title">طلب تنفيذ تجربة</span>
+          <span class="d-desc">ابدأ تصميم فعاليتك مع خبرائنا</span>
+        </div>
+        <span class="d-arrow"><i class="fa-solid fa-arrow-left"></i></span>
+      </a>
+    </nav>
+
+    <!-- Drawer Footer Actions -->
+    <div class="drawer-bottom-zone">
+      <a routerLink="/contact" (click)="closeMobileMenu()" class="drawer-cta-primary">
+        <span>ابدأ تصميم فعاليتك معنا</span>
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+
+      <div class="drawer-quick-contacts">
+        <a href="https://wa.me/966500000000" target="_blank" rel="noopener noreferrer" class="quick-chip">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>واتساب</span>
+        </a>
+        <a href="mailto:info@erthelgazera.com" class="quick-chip">
+          <i class="fa-solid fa-envelope"></i>
+          <span>البريد</span>
+        </a>
+      </div>
+
+      <div class="drawer-corp-credit">
+        <span class="corp-dot"></span>
+        <p class="corp-text">إرث الجزيرة — إحدى علامات شركة الإبداع الفذ</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<section class="clients-movement flow-spacing-compact">
+  <div class="container">
+    <div class="clients-masthead">
+      <span class="editorial-kicker">شركاء النجاح والثقة</span>
+      <h2 class="clients-headline">
+        شواهد الأثر والموثوقية في كبرى المحافل الوطنية
+      </h2>
+    </div>
+  </div>
+
+  <!-- Continuous Refined Editorial Logo Marquee (Zero Cards) -->
+  <div class="marquee-viewport">
+    <div #clientSwiper class="swiper clients-swiper">
+      <div class="swiper-wrapper ease-linear">
+        @for (c of clients; track c.id) {
+          <div class="swiper-slide client-slide">
+            <div class="client-logo-item">
+              <img [src]="c.logo" [alt]="c.name" class="client-real-logo" />
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

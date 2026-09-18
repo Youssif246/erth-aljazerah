@@ -1,0 +1,47 @@
+<section class="values-section">
+  <div class="container values-container">
+    <!-- Section Header -->
+    <div class="values-masthead">
+      <div class="values-kicker-wrap">
+        <span class="kicker-line kicker-line-right" aria-hidden="true"></span>
+        <span class="values-kicker">قيم العلامة</span>
+        <span class="kicker-line kicker-line-left" aria-hidden="true"></span>
+      </div>
+      <h2 class="values-headline">
+        المبادئ التي تقود كل فكرة ونصمّم بها كل تجربة
+      </h2>
+      <p class="values-lead">
+        تستند إرث الجزيرة إلى منظومة قيم حية تشكّل بوصلتنا في إحياء التراث وتقديمه للعالم.
+      </p>
+    </div>
+
+    <!-- Elevated Architectural Values Grid -->
+    <div class="values-grid">
+      @for (v of values; track v.title) {
+        <article class="value-card">
+          <!-- Card Top Bar: Number Badge + Cultural Tag -->
+          <div class="card-top-bar">
+            <div class="card-num-badge">
+              <span class="badge-num">{{ v.num }}</span>
+            </div>
+            <span class="card-tag">{{ v.tag }}</span>
+          </div>
+
+          <!-- Card Header & Icon -->
+          <div class="card-header">
+            <div class="card-icon-box" aria-hidden="true">
+              <i [class]="v.iconClass"></i>
+            </div>
+            <h3 class="card-title">{{ v.title }}</h3>
+          </div>
+
+          <!-- Card Description -->
+          <p class="card-desc">{{ v.desc }}</p>
+
+          <!-- Delicate Bottom Accent -->
+          <div class="card-foot-accent" aria-hidden="true"></div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

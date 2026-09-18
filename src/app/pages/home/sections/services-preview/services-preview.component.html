@@ -1,0 +1,77 @@
+<section class="services-movement flow-spacing" id="services">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="services-header">
+      <div class="header-content">
+        <span class="editorial-kicker">فهرس الصنائع والخدمات التنفيذية</span>
+        <h2 class="services-headline">
+          من الفكرة والقصة التاريخية حتى خشبة المسرح والمشهد الحي
+        </h2>
+      </div>
+
+      <!-- Minimal Prev/Next Controls (Accessible Across Breakpoints) -->
+      <div class="slider-controls" aria-label="التحكم في المعرض">
+        <button 
+          type="button"
+          class="nav-arrow-btn prev-btn" 
+          (click)="slidePrev()"
+          title="الخدمات السابقة"
+          aria-label="الخدمات السابقة">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <button 
+          type="button"
+          class="nav-arrow-btn next-btn" 
+          (click)="slideNext()"
+          title="الخدمات التالية"
+          aria-label="الخدمات التالية">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Unified Cinematic Service Slider -->
+    <div class="services-slider-container">
+      <div #servicesSwiper class="swiper services-cinematic-swiper">
+        <div class="swiper-wrapper">
+          @for (s of services; track s.id) {
+            <div class="swiper-slide">
+              <article class="service-cinematic-card">
+                <!-- Real Service Photography -->
+                <div class="card-media-canvas">
+                  <img 
+                    [src]="s.image" 
+                    [alt]="s.name" 
+                    class="card-photo" 
+                    loading="lazy" />
+                  <div class="card-directional-overlay"></div>
+                </div>
+
+                <!-- Integrated Card Content -->
+                <div class="card-content-layer">
+                  <!-- Subtle Service Number -->
+                  <div class="card-meta">
+                    <span class="service-card-num">{{ s.number }}</span>
+                  </div>
+
+                  <!-- Title & CTA -->
+                  <div class="card-bottom-info">
+                    <h3 class="service-card-title">{{ s.name }}</h3>
+
+                    <div class="card-cta-wrap">
+                      <a routerLink="/services" class="service-card-cta">
+                        <span>اكتشف التفاصيل</span>
+                        <i class="fa-solid fa-arrow-left cta-arrow"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

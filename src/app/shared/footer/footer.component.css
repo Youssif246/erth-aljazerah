@@ -1,0 +1,279 @@
+/* ==========================================================================
+   Footer — Premium Dark Editorial Redesign (#141311)
+   ========================================================================== */
+
+.site-footer {
+  background-color: #141311;
+  color: var(--ink-light);
+  border-top: 1px solid rgba(250, 247, 240, 0.08);
+  position: relative;
+  overflow: hidden;
+  padding-top: clamp(60px, 7vw, 90px);
+}
+
+.footer-content {
+  position: relative;
+}
+
+/* Subtle Editorial Marker Line */
+.footer-architectural-marker {
+  width: 100%;
+  margin-bottom: clamp(36px, 5vw, 56px);
+}
+
+.marker-gold-line {
+  display: block;
+  width: 48px;
+  height: 2px;
+  background-color: var(--ochre);
+  opacity: 0.85;
+}
+
+/* Main Editorial Grid (Desktop: 4 columns with strong brand anchor on right in RTL) */
+.footer-editorial-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.1fr 1.2fr 1.3fr;
+  gap: clamp(32px, 4.5vw, 64px);
+  padding-bottom: clamp(48px, 6vw, 72px);
+}
+
+/* Col 1: Brand Anchor & Integrated Action */
+.footer-brand-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-brand-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.footer-logo-img {
+  width: clamp(52px, 4vw, 64px);
+  height: clamp(52px, 4vw, 64px);
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+}
+
+.footer-brand-title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.footer-brand-title {
+  font-size: clamp(1.3rem, 1.6vw, 1.55rem);
+  font-weight: 700;
+  color: var(--ivory);
+  line-height: 1.2;
+}
+
+.footer-brand-tagline {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ochre-light);
+  letter-spacing: 0.02em;
+}
+
+.footer-description {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--ink-light-muted);
+  max-width: 440px;
+  margin: 0;
+}
+
+/* Architectural CTA Button (Warm Ivory / Sandstone with Dark Text) */
+.footer-action-wrap {
+  margin-top: 8px;
+}
+
+.btn-footer-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background-color: var(--ivory);
+  color: #141311;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border: 1px solid var(--ivory);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.btn-footer-cta:hover {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.btn-footer-cta:active {
+  transform: translateY(0);
+}
+
+.footer-cta-arrow {
+  transition: transform 0.3s ease;
+}
+
+.btn-footer-cta:hover .footer-cta-arrow {
+  transform: translateX(-4px);
+}
+
+/* Navigation Columns */
+.footer-nav-column {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Small Gold Section Label */
+.footer-col-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--ochre);
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(193, 139, 68, 0.25);
+  width: fit-content;
+}
+
+.footer-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-link {
+  font-size: 0.94rem;
+  color: var(--ink-light-muted);
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.25s ease, transform 0.25s ease;
+  line-height: 1.5;
+}
+
+.footer-link:hover {
+  color: var(--ivory);
+  transform: translateX(-4px);
+}
+
+.institutional-desc {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--ink-light-muted);
+  margin: 0;
+}
+
+/* Bottom Bar (Copyright on Right in RTL, Tagline on Left) */
+.footer-bottom-bar {
+  border-top: 1px solid rgba(250, 247, 240, 0.08);
+  padding-block: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-size: 0.88rem;
+  color: var(--ink-light-subtle);
+}
+
+.footer-legal-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink-light-muted);
+}
+
+.dot-sep {
+  opacity: 0.4;
+}
+
+.footer-motto {
+  font-size: 0.92rem;
+  color: var(--ochre-light);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+
+@media (max-width: 1040px) {
+  .footer-editorial-grid {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 36px;
+  }
+
+  .institutional-column {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding-top: 50px;
+  }
+
+  .footer-editorial-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-bottom: 44px;
+  }
+
+  .footer-brand-column {
+    gap: 16px;
+  }
+
+  .footer-description {
+    max-width: 100%;
+  }
+
+  .btn-footer-cta {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding-block: 24px;
+  }
+
+  .footer-legal-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .dot-sep {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-footer-cta,
+  .footer-cta-arrow,
+  .footer-link {
+    transition: none !important;
+    transform: none !important;
+  }
+}

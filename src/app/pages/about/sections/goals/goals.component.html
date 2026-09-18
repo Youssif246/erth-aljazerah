@@ -1,0 +1,51 @@
+<section class="goals-section">
+  <div class="container goals-container">
+    <!-- Section Header -->
+    <div class="goals-masthead">
+      <div class="goals-kicker-wrap">
+        <span class="goals-kicker">أهدافنا الاستراتيجية</span>
+        <span class="goals-kicker-line" aria-hidden="true"></span>
+      </div>
+      <h2 class="goals-headline">
+        خارطة طريق واضحة لصناعة الأثر والريادة
+      </h2>
+      <p class="goals-lead">
+        نسير بخطى استراتيجية مدروسة لتحقيق أهداف جوهرية تخدم المشهد التراثي والوطني.
+      </p>
+    </div>
+
+    <!-- Editorial Vertical Heritage Timeline -->
+    <div class="timeline-wrapper" #timelineWrap>
+      <!-- Central Timeline Track Line (Dual-layer: Inactive Base + Ochre Progress) -->
+      <div class="timeline-axis" aria-hidden="true">
+        <div class="timeline-line-base"></div>
+        <div class="timeline-line-progress" #progressLine></div>
+      </div>
+
+      <!-- Timeline Items Flow (Alternating Desktop: Right / Left) -->
+      <div class="timeline-rows-flow">
+        @for (item of goals; track item.num; let idx = $index; let odd = $odd) {
+          <div 
+            class="timeline-row" 
+            [class.row-right]="!odd" 
+            [class.row-left]="odd"
+            [attr.data-index]="idx">
+            
+            <!-- Central Timeline Node -->
+            <div class="timeline-node-anchor" aria-hidden="true">
+              <span class="timeline-node"></span>
+            </div>
+
+            <!-- Content Card -->
+            <article class="timeline-content-card">
+              <div class="card-meta">
+                <span class="card-num">{{ item.num }}</span>
+              </div>
+              <p class="card-text">{{ item.text }}</p>
+            </article>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

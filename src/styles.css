@@ -1,1 +1,549 @@
-/* You can add global styles to this file, and also import other style files */
+/* Swiper Bundle CSS */
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+@import 'swiper/css/autoplay';
+
+/* ==========================================================================
+   إرث الجزيرة — Light-First Saudi Cultural Heritage Design System
+   Derived directly from the official logo: Charcoal, Ochre Gold, Warm Ivory, Sandstone, Olive
+   ========================================================================== */
+
+:root {
+  /* Primary Canvas: Warm Ivory & Heritage Cream (Light-First System) */
+  --ivory: #FAF7F0;
+  --ivory-warm: #F4ECE1;
+  --ivory-surface: #EFE6D8;
+  --sandstone: #E6DBC6;
+  --sandstone-muted: #D9CEB8;
+
+  /* Ink & Typography for Light Canvas */
+  --ink-charcoal: #161513;
+  --ink-muted: #5C564D;
+  --ink-subtle: #8A8174;
+
+  /* Strategic Deep Charcoal & Earth Black (Used for immersive/cinematic moments) */
+  --charcoal-deep: #141311;
+  --charcoal-surface: #1B1A17;
+  --charcoal-elevated: #24221E;
+  --ink-light: #FAF7F0;
+  --ink-light-muted: #C8C0B2;
+  --ink-light-subtle: #827B70;
+
+  /* Brand Accents from Official Logo */
+  --ochre: #C18B44;
+  --ochre-deep: #9E6F2E;
+  --ochre-light: #DDA862;
+  --ochre-glow: rgba(193, 139, 68, 0.15);
+
+  --olive: #4E5B44;
+  --olive-light: #6A7A5D;
+  --olive-glow: rgba(78, 91, 68, 0.15);
+
+  /* Architectural Drafting Hairlines */
+  --line-dark: 1px solid rgba(22, 21, 19, 0.10);
+  --line-dark-subtle: 1px solid rgba(22, 21, 19, 0.05);
+  --line-gold: 1px solid rgba(193, 139, 68, 0.25);
+  --line-light: 1px solid rgba(250, 247, 240, 0.12);
+  --line-light-subtle: 1px solid rgba(250, 247, 240, 0.06);
+
+  /* Backwards-Compatible Global Aliases */
+  --color-bg: var(--ivory);
+  --color-bg-alt: var(--ivory-warm);
+  --color-bg-dark: var(--charcoal-deep);
+  --color-text: var(--ink-charcoal);
+  --color-text-muted: var(--ink-muted);
+  --color-text-light: var(--ink-light);
+  --color-text-light-muted: var(--ink-light-muted);
+  --color-text-light-subtle: var(--ink-light-subtle);
+  --color-ochre: var(--ochre);
+  --color-ochre-light: var(--ochre-light);
+  --color-sage: var(--olive);
+  --hairline-gold: var(--line-gold);
+  --hairline-dark: var(--line-dark);
+  --hairline-light: var(--line-light);
+  --transition-luxury: var(--trans-smooth);
+
+  /* Typography */
+  --font-primary: 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: var(--font-primary);
+  --font-editorial: 'Amiri', Georgia, serif;
+  --font-serif: var(--font-editorial);
+
+  /* Transitions */
+  --trans-cinematic: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  --trans-smooth: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  --trans-quick: all 0.2s ease-out;
+
+  /* Layout Containers */
+  --max-width: 1440px;
+  --max-editorial: 1180px;
+  --max-narrow: 880px;
+}
+
+/* Reset & Global Canvas (Light-First Base) */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--ivory);
+  color: var(--ink-charcoal);
+  direction: rtl;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-primary);
+  line-height: 1.8;
+  background-color: var(--ivory);
+  color: var(--ink-charcoal);
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Subtle Tactile Desert Plaster Grain (Optimized GPU-friendly layer, zero composite lag) */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.016;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+  color: inherit;
+}
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--trans-smooth);
+}
+
+button {
+  font-family: var(--font-primary);
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Containers */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: clamp(24px, 5vw, 64px);
+}
+
+.container-editorial {
+  width: 100%;
+  max-width: var(--max-editorial);
+  margin-inline: auto;
+  padding-inline: clamp(24px, 5vw, 64px);
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: var(--max-narrow);
+  margin-inline: auto;
+  padding-inline: clamp(24px, 5vw, 64px);
+}
+
+/* Flow Spacing */
+.flow-spacing,
+.section-spacing {
+  padding-block: clamp(96px, 11vw, 170px);
+  position: relative;
+}
+
+.flow-spacing-compact,
+.section-spacing-compact {
+  padding-block: clamp(60px, 7vw, 100px);
+  position: relative;
+}
+
+/* Editorial Kickers */
+.editorial-kicker,
+.editorial-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--ochre);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.editorial-kicker::before,
+.editorial-tag::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 1px;
+  background: linear-gradient(to left, var(--ochre), transparent);
+}
+
+.editorial-kicker.on-dark,
+.editorial-tag.light-tag {
+  color: var(--ochre-light);
+}
+
+.editorial-kicker.on-dark::before,
+.editorial-tag.light-tag::before {
+  background: linear-gradient(to left, var(--ochre-light), transparent);
+}
+
+.editorial-headline-large {
+  font-size: clamp(2.4rem, 4.4vw, 4.4rem);
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+  color: var(--ink-charcoal);
+  margin-bottom: 28px;
+}
+
+.editorial-headline-large.light {
+  color: var(--ink-light);
+}
+
+.editorial-lead {
+  font-size: clamp(1.1rem, 1.4vw, 1.35rem);
+  color: var(--ink-muted);
+  line-height: 1.85;
+  font-weight: 400;
+  max-width: 780px;
+}
+
+.editorial-lead.light {
+  color: var(--ink-light-muted);
+}
+
+/* Luxury Architectural Buttons */
+.btn-monolith,
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px 40px;
+  background: var(--ink-charcoal);
+  color: var(--ivory);
+  font-weight: 600;
+  font-size: 0.96rem;
+  letter-spacing: 0.02em;
+  border-radius: 1px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--ink-charcoal);
+  transition: var(--trans-smooth);
+}
+
+.btn-monolith::before,
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--ochre);
+  transform: translateX(101%);
+  transition: var(--trans-cinematic);
+  z-index: 0;
+}
+
+.btn-monolith:hover::before,
+.btn-primary:hover::before {
+  transform: translateX(0);
+}
+
+.btn-monolith span, 
+.btn-monolith svg,
+.btn-primary span,
+.btn-primary svg {
+  position: relative;
+  z-index: 1;
+  transition: var(--trans-smooth);
+}
+
+.btn-monolith:hover,
+.btn-primary:hover {
+  border-color: var(--ochre);
+  color: #FFFFFF;
+}
+
+.btn-monolith.light,
+.btn-primary.light {
+  background: var(--ivory);
+  color: var(--charcoal-deep);
+  border-color: var(--ivory);
+}
+
+.btn-ghost-arch,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 15px 36px;
+  background: transparent;
+  color: var(--ink-charcoal);
+  border: var(--line-dark);
+  font-weight: 500;
+  font-size: 0.96rem;
+  border-radius: 1px;
+  transition: var(--trans-smooth);
+}
+
+.btn-ghost-arch:hover,
+.btn-secondary:hover {
+  border-color: var(--ochre);
+  color: var(--ochre);
+  background: rgba(193, 139, 68, 0.06);
+}
+
+.btn-ghost-arch.on-dark,
+.btn-secondary.light {
+  color: var(--ink-light);
+  border: var(--line-light);
+}
+
+.btn-ghost-arch.on-dark:hover,
+.btn-secondary.light:hover {
+  border-color: var(--ochre-light);
+  color: var(--ochre-light);
+  background: rgba(193, 139, 68, 0.1);
+}
+
+/* Swiper Overrides for Cultural Editorial Exhibition */
+.swiper-pagination-bullet {
+  background: var(--sandstone-muted) !important;
+  opacity: 0.5;
+  width: 6px;
+  height: 6px;
+  border-radius: 1px;
+  transition: var(--trans-quick);
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--ochre) !important;
+  opacity: 1;
+  width: 32px;
+}
+
+/* ==========================================================================
+   Unified Architectural Page Hero System (About, Services, Contact)
+   ========================================================================== */
+.page-hero-section {
+  background-color: var(--sandstone-light, #FAF7F0);
+  border-bottom: 1px solid rgba(22, 21, 19, 0.08);
+  padding-top: clamp(155px, 20vh, 210px);
+  padding-bottom: clamp(65px, 8.5vh, 95px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Heritage Backdrop Graphics Layer */
+.page-hero-heritage-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero-aura-glow {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse 65% 60% at 50% 36%, rgba(193, 139, 68, 0.16) 0%, rgba(244, 236, 225, 0.45) 50%, transparent 80%),
+    radial-gradient(circle at 12% 25%, rgba(193, 139, 68, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 88% 75%, rgba(78, 91, 68, 0.06) 0%, transparent 45%);
+}
+
+.hero-heritage-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page-hero-container {
+  width: 100%;
+  max-width: var(--max-width, 1440px);
+  margin-inline: auto;
+  padding-inline: clamp(20px, 5vw, 64px);
+  position: relative;
+  z-index: 2;
+}
+
+.page-hero-content {
+  max-width: 940px;
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Symmetrical Centered Kicker */
+.page-hero-kicker-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-inline: auto;
+  margin-bottom: clamp(18px, 2.4vh, 26px);
+}
+
+.page-hero-kicker {
+  font-family: var(--font-primary, 'IBM Plex Sans Arabic', sans-serif);
+  font-size: clamp(0.82rem, 0.95vw, 0.90rem);
+  font-weight: 600;
+  color: var(--ochre, #C18B44);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.page-hero-kicker-line {
+  display: inline-block;
+  width: 44px;
+  height: 1px;
+}
+
+.page-hero-kicker-line.kicker-right {
+  background: linear-gradient(to left, var(--ochre, #C18B44), transparent);
+}
+
+.page-hero-kicker-line.kicker-left {
+  background: linear-gradient(to right, var(--ochre, #C18B44), transparent);
+}
+
+/* Controlled Authoritative Headline */
+.page-hero-title {
+  font-family: var(--font-primary, 'IBM Plex Sans Arabic', sans-serif);
+  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  font-weight: 700;
+  color: var(--ink-charcoal, #141311);
+  line-height: 1.32;
+  letter-spacing: -0.015em;
+  margin: 0 auto clamp(18px, 2.4vh, 26px) auto;
+  text-align: center;
+  text-wrap: balance;
+  max-width: 900px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Supporting Narrative Copy */
+.page-hero-lead {
+  font-family: var(--font-primary, 'IBM Plex Sans Arabic', sans-serif);
+  font-size: clamp(1.02rem, 1.22vw, 1.18rem);
+  line-height: 1.88;
+  color: var(--ink-muted, #5C564D);
+  max-width: 780px;
+  margin: 0 auto clamp(28px, 3.6vh, 38px) auto;
+  text-align: center;
+  text-wrap: balance;
+  font-weight: 400;
+}
+
+/* Floating Glassmorphic Brand Metadata Bar */
+.page-hero-meta-bar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(12px, 1.6vw, 20px);
+  padding: 10px 24px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(193, 139, 68, 0.24);
+  border-radius: 30px;
+  box-shadow: 0 4px 18px rgba(22, 21, 19, 0.04);
+  font-size: 0.86rem;
+  color: var(--ink-muted, #5C564D);
+  font-weight: 500;
+  margin-inline: auto;
+}
+
+.page-hero-meta-bar .meta-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.page-hero-meta-bar .meta-tag.highlight {
+  color: var(--ochre-deep, #9E6F2E);
+  font-weight: 600;
+}
+
+.page-hero-meta-bar .meta-sep {
+  color: var(--ochre, #C18B44);
+  opacity: 0.45;
+  font-size: 0.8rem;
+}
+
+.text-ochre {
+  color: var(--ochre, #C18B44);
+}
+
+@media (max-width: 768px) {
+  .page-hero-section {
+    padding-top: 130px;
+    padding-bottom: 50px;
+  }
+
+  .page-hero-title {
+    font-size: clamp(1.75rem, 5.8vw, 2.2rem);
+    line-height: 1.34;
+  }
+
+  .page-hero-lead {
+    font-size: 0.95rem;
+    line-height: 1.76;
+  }
+
+  .page-hero-meta-bar {
+    border-radius: 16px;
+    padding: 12px 18px;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .page-hero-meta-bar .meta-sep {
+    display: none;
+  }
+}
+

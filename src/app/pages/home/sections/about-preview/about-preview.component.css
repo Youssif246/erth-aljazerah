@@ -1,0 +1,303 @@
+/* ==========================================================================
+   About Preview / Brand Philosophy — Editorial Brand Manifesto
+   - Pure typography, whitespace, fine lines, numbers & hierarchy
+   - Completely image-free (creates a calm editorial pause before Services)
+   - Monumental pull-quote star with refined editorial footprint
+   - Three unboxed editorial columns with hairline dividers (no beige cards)
+   ========================================================================== */
+
+.philosophy-manifesto {
+  position: relative;
+  background-color: var(--ivory, #FAF7F0);
+  color: var(--ink-charcoal, #161513);
+  padding-block: clamp(80px, 9.5vw, 130px);
+  border-top: 1px solid rgba(22, 21, 19, 0.08);
+  overflow: hidden;
+}
+
+.philosophy-container {
+  width: 100%;
+  max-width: var(--max-width, 1440px);
+  margin-inline: auto;
+  padding-inline: clamp(24px, 5vw, 64px);
+}
+
+/* --------------------------------------------------------------------------
+   1. Section Label (Ochre Gold, Unboxed, Architectural Line)
+   -------------------------------------------------------------------------- */
+.philosophy-header {
+  margin-bottom: clamp(20px, 2.5vw, 32px);
+}
+
+.philosophy-label-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.philosophy-kicker {
+  font-family: var(--font-primary, 'IBM Plex Sans Arabic', sans-serif);
+  font-size: clamp(0.82rem, 0.95vw, 0.88rem);
+  font-weight: 600;
+  color: var(--ochre, #C18B44);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.kicker-rule {
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(to left, var(--ochre, #C18B44), transparent);
+}
+
+/* --------------------------------------------------------------------------
+   2. Main Quote — The Dominant Hero of this Section
+   -------------------------------------------------------------------------- */
+.philosophy-statement-wrap {
+  max-width: 1100px;
+  margin-bottom: clamp(48px, 6vw, 72px);
+}
+
+.philosophy-monumental-quote {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary, 'IBM Plex Sans Arabic', sans-serif);
+  /* Scaled ~6% smaller for luxury editorial proportion */
+  font-size: clamp(1.95rem, 3.6vw, 3.45rem);
+  font-weight: 700;
+  line-height: 1.44;
+  color: var(--ink-charcoal, #161513);
+  letter-spacing: -0.015em;
+  word-spacing: 0.02em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: none;
+}
+
+/* Subdued, smaller, refined quotation glyphs */
+.quote-glyph {
+  display: inline-block;
+  font-size: 0.82em;
+  color: var(--ochre, #C18B44);
+  opacity: 0.42;
+  font-weight: 300;
+  margin-inline: 4px;
+  vertical-align: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   3. Architectural Hairline Separator with Ochre Tracker
+   -------------------------------------------------------------------------- */
+.philosophy-hairline-track {
+  width: 100%;
+  height: 1px;
+  background: rgba(22, 21, 19, 0.07);
+  position: relative;
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+
+.hairline-accent {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 52px;
+  height: 1.5px;
+  background: var(--ochre, #C18B44);
+}
+
+/* --------------------------------------------------------------------------
+   4. Three Core Principles (Editorial Columns with Hairline Separators, No Cards)
+   -------------------------------------------------------------------------- */
+.philosophy-principles-flow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(28px, 3.5vw, 52px);
+}
+
+.principle-column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s ease;
+}
+
+/* Extremely thin, subtle hairline separation between columns in RTL */
+.principle-column:not(:first-child) {
+  border-right: 1px solid rgba(22, 21, 19, 0.07);
+  padding-right: clamp(24px, 3.2vw, 44px);
+}
+
+/* Restrained Ochre Gold number, slightly more visible with clean presence */
+.principle-num {
+  font-family: var(--font-primary, 'IBM Plex Sans Arabic', sans-serif);
+  font-size: clamp(2.1rem, 2.8vw, 2.8rem);
+  font-weight: 450;
+  color: rgba(193, 139, 68, 0.72);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.principle-column:hover .principle-num {
+  color: var(--ochre, #C18B44);
+}
+
+.principle-title {
+  font-family: var(--font-primary, 'IBM Plex Sans Arabic', sans-serif);
+  font-size: clamp(1.15rem, 1.35vw, 1.32rem);
+  font-weight: 650;
+  color: var(--ink-charcoal, #161513);
+  line-height: 1.36;
+  margin: 0 0 10px 0;
+  transition: color 0.3s ease;
+}
+
+.principle-column:hover .principle-title {
+  color: #0E0D0C;
+}
+
+.principle-desc {
+  font-family: var(--font-primary, 'IBM Plex Sans Arabic', sans-serif);
+  font-size: clamp(0.90rem, 1.02vw, 1.0rem);
+  color: var(--ink-muted, #5C564D);
+  line-height: 1.80;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. Editorial Continuation Action
+   Centered naturally beneath the three-column principles, quiet and architectural
+   -------------------------------------------------------------------------- */
+.philosophy-action-row {
+  margin-top: clamp(48px, 6vw, 76px);
+  display: flex;
+  justify-content: center;
+}
+
+.philosophy-editorial-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 36px;
+  background: transparent;
+  color: var(--ink-charcoal, #161513);
+  font-family: var(--font-primary, 'IBM Plex Sans Arabic', sans-serif);
+  font-size: 0.90rem;
+  font-weight: 550;
+  text-decoration: none;
+  border: 1px solid rgba(22, 21, 19, 0.16);
+  border-radius: 2px;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.cta-arrow {
+  display: inline-flex;
+  color: var(--ink-charcoal, #161513);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.philosophy-editorial-cta:hover {
+  border-color: var(--ochre, #C18B44);
+  color: var(--ochre-deep, #9E6F2E);
+  background: rgba(193, 139, 68, 0.05);
+}
+
+.philosophy-editorial-cta:hover .cta-arrow {
+  transform: translateX(-3px);
+  color: var(--ochre, #C18B44);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Art Direction
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .philosophy-principles-flow {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .principle-column:not(:first-child) {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  /* Fine horizontal hairline divider on mobile */
+  .principle-column:not(:last-child) {
+    border-bottom: 1px solid rgba(22, 21, 19, 0.07);
+    padding-bottom: 28px;
+  }
+
+  .philosophy-monumental-quote {
+    font-size: clamp(1.65rem, 5.2vw, 2.25rem);
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 480px) {
+  .philosophy-manifesto {
+    padding-block: 64px;
+  }
+
+  .philosophy-statement-wrap {
+    margin-bottom: 36px;
+  }
+
+  .philosophy-monumental-quote {
+    font-size: clamp(1.42rem, 5.8vw, 1.75rem);
+    line-height: 1.46;
+  }
+
+  .principle-num {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+  }
+
+  .principle-title {
+    font-size: 1.22rem;
+    line-height: 1.38;
+  }
+
+  .principle-desc {
+    font-size: 0.96rem;
+    line-height: 1.75;
+  }
+
+  .philosophy-editorial-cta {
+    width: auto;
+    max-width: 90vw;
+    padding: 12px 28px;
+    justify-content: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Hardware-Accelerated Staggered Reveal (100% Safe: Visible by default)
+   -------------------------------------------------------------------------- */
+.philosophy-label-wrap,
+.philosophy-monumental-quote,
+.philosophy-action-row {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hairline-accent {
+  transform: scaleX(1);
+  transform-origin: right center;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.principle-column {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+

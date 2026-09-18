@@ -1,0 +1,363 @@
+/* ==========================================================================
+   Target Sectors Section — Elevated Editorial Sector Index
+   - Refined art direction for Erth Aljazira
+   - Content strictly limited to the 7 sector names
+   - Organic editorial composition: whitespace + subtle hairlines (zero box borders)
+   - Featured first sector (01) with prominent scale & Ochre Gold accent
+   - Integrated small editorial numbers (12–16px) & expressive titles (22–30px)
+   - Restrained hover states with zero background panels (300–400ms)
+   - Ultra-compact 2-column mobile presentation (zero scroll fatigue)
+   ========================================================================== */
+
+.sectors-section {
+  position: relative;
+  background-color: var(--ivory, #FAF7F0);
+  color: var(--ink-charcoal, #191816);
+  padding-block: clamp(52px, 6.5vw, 86px);
+  border-top: 1px solid rgba(25, 24, 22, 0.06);
+  overflow: hidden;
+}
+
+.sectors-container {
+  width: 100%;
+  max-width: var(--max-width, 1440px);
+  margin-inline: auto;
+  padding-inline: clamp(24px, 5vw, 64px);
+  position: relative;
+  z-index: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Editorial Header
+   -------------------------------------------------------------------------- */
+.sectors-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: clamp(28px, 4vw, 44px);
+}
+
+.header-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sectors-kicker {
+  font-family: var(--font-primary, 'IBM Plex Sans Arabic', sans-serif);
+  font-size: clamp(0.80rem, 0.95vw, 0.88rem);
+  font-weight: 600;
+  color: var(--ochre, #C18B44);
+  letter-spacing: 0.08em;
+}
+
+.sectors-title {
+  font-family: var(--font-primary, 'IBM Plex Sans Arabic', sans-serif);
+  font-size: clamp(1.85rem, 2.8vw, 2.5rem);
+  font-weight: 700;
+  color: var(--ink-charcoal, #191816);
+  line-height: 1.22;
+  margin: 0;
+  letter-spacing: -0.015em;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle Brand Architectural Marker (Identity Geometry) */
+.brand-structural-marker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.72;
+}
+
+.marker-axis {
+  width: 24px;
+  height: 1px;
+  background: var(--ochre, #C18B44);
+}
+
+.marker-coord {
+  font-family: var(--font-primary, 'IBM Plex Sans Arabic', sans-serif);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--olive, #56644A);
+  letter-spacing: 0.08em;
+}
+
+/* --------------------------------------------------------------------------
+   The 7-Item Editorial Sector Matrix (No Box Borders, Subtle Hairlines)
+   -------------------------------------------------------------------------- */
+.sector-matrix {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  /* No outer box borders: composition lives directly on the warm ivory canvas */
+}
+
+.matrix-item {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  background-color: transparent;
+  transition: color 0.35s ease;
+}
+
+/* Featured First Sector (01 — Full Width Lead) */
+.item-hero {
+  grid-column: 1 / -1;
+  padding-block: clamp(24px, 3.6vh, 36px);
+  padding-inline: clamp(16px, 2.5vw, 28px);
+  border-bottom: 1px solid rgba(25, 24, 22, 0.07);
+}
+
+.item-hero .item-title {
+  font-size: clamp(1.72rem, 2.5vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.28;
+}
+
+.item-hero .item-num {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ochre, #C18B44);
+  min-width: 32px;
+}
+
+/* Subtle Ochre Gold Accent Line for the Featured Sector */
+.hero-gold-accent {
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--ochre, #C18B44);
+  margin-top: 8px;
+  margin-inline-start: clamp(44px, 3.5vw, 56px);
+  opacity: 0.65;
+  transition: width 0.35s ease, opacity 0.35s ease;
+}
+
+.item-hero:hover .hero-gold-accent {
+  width: 48px;
+  opacity: 1;
+}
+
+/* Regular Sectors (02 through 07) */
+.item-regular {
+  padding-block: clamp(18px, 2.5vh, 26px);
+  padding-inline: clamp(16px, 2.2vw, 28px);
+  border-bottom: 1px solid rgba(25, 24, 22, 0.06);
+}
+
+.item-regular .item-title {
+  font-size: clamp(1.32rem, 1.75vw, 1.62rem);
+  font-weight: 600;
+  line-height: 1.36;
+}
+
+.item-regular .item-num {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(25, 24, 22, 0.40);
+  min-width: 26px;
+}
+
+/* Ultra-Subtle Vertical Hairline between columns (in RTL, right column gets left border) */
+.item-02,
+.item-04,
+.item-06 {
+  border-left: 1px solid rgba(25, 24, 22, 0.06);
+}
+
+/* Bottom Row Items remove bottom border */
+.item-06,
+.item-07 {
+  border-bottom: none;
+}
+
+/* Item Inner Layout: Number + Dominant Title + Cue Arrow */
+.item-inner {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+  position: relative;
+  z-index: 1;
+}
+
+.item-num {
+  font-family: var(--font-primary, 'IBM Plex Sans Arabic', sans-serif);
+  font-feature-settings: 'tnum';
+  flex-shrink: 0;
+  transition: color 0.35s ease, opacity 0.35s ease;
+}
+
+.item-title {
+  font-family: var(--font-primary, 'IBM Plex Sans Arabic', sans-serif);
+  color: var(--ink-charcoal, #191816);
+  margin: 0;
+  letter-spacing: -0.01em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  transition: color 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Expressive Sector Icon */
+.item-cue {
+  margin-inline-start: auto;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(193, 139, 68, 0.08);
+  color: var(--ochre, #C18B44);
+  opacity: 0.85;
+  transform: translateX(0);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.item-cue i {
+  line-height: 1;
+}
+
+/* Fine Ochre Gold Expanding Hairline on Hover */
+.item-hairline {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--ochre, #C18B44);
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   Restrained Hover Interaction (No Background Panels, 300–400ms)
+   -------------------------------------------------------------------------- */
+.matrix-item:hover .item-title,
+.matrix-item:focus-visible .item-title {
+  color: #050504;
+  transform: translateX(-4px);
+}
+
+.matrix-item:hover .item-num,
+.matrix-item:focus-visible .item-num {
+  color: var(--ochre, #C18B44);
+  opacity: 1;
+}
+
+.matrix-item:hover .item-cue,
+.matrix-item:focus-visible .item-cue {
+  opacity: 1;
+  background: var(--ochre, #C18B44);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(193, 139, 68, 0.28);
+}
+
+.matrix-item:hover .item-hairline,
+.matrix-item:focus-visible .item-hairline {
+  width: clamp(48px, 9vw, 96px);
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Viewport (Compact 2-Column Editorial Matrix)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .sectors-section {
+    padding-block: 42px;
+  }
+
+  .sectors-header {
+    margin-bottom: 20px;
+  }
+
+  .sectors-title {
+    font-size: 1.58rem;
+  }
+
+  .brand-structural-marker {
+    display: none;
+  }
+
+  .sector-matrix {
+    grid-template-columns: 2fr;
+  }
+
+  .item-hero {
+    grid-column: 1 / -1;
+    padding-block: 14px;
+    padding-inline: 12px;
+  }
+
+  .item-hero .item-title {
+    font-size: clamp(1.05rem, 3.8vw, 1.18rem);
+  }
+
+  .hero-gold-accent {
+    margin-inline-start: 36px;
+    margin-top: 6px;
+  }
+
+  .item-regular {
+    padding-block: 13px;
+    padding-inline: 10px;
+  }
+
+  .item-regular .item-title {
+    font-size: clamp(0.90rem, 3.5vw, 1.0rem);
+    line-height: 1.34;
+  }
+
+  .item-regular .item-num {
+    font-size: 12px;
+    min-width: 18px;
+  }
+
+  .item-inner {
+    gap: 8px;
+  }
+
+  .item-cue {
+    display: flex;
+    width: 26px;
+    height: 26px;
+    font-size: 0.8rem;
+    opacity: 0.85;
+  }
+
+  .item-hairline {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .sectors-container {
+    padding-inline: 16px;
+
+  }
+
+  .item-regular {
+    padding-inline: 8px;
+  }
+
+  .item-regular .item-title {
+    font-size: 0.86rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Hardware-Accelerated Staggered Reveal (100% Safe: Visible by default)
+   -------------------------------------------------------------------------- */
+.sectors-header,
+.item-hero,
+.item-regular {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}

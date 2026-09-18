@@ -1,0 +1,70 @@
+<section class="experiences-exhibition-movement flow-spacing">
+  <div class="container">
+    <!-- Editorial Exhibition Header -->
+    <div class="exhibition-header">
+      <div class="header-main-text">
+        <span class="editorial-kicker on-dark">عوالم إرث الجزيرة</span>
+        <h2 class="exhibition-title">
+          نماذج من تجاربنا وبيئاتنا التراثية الحية
+        </h2>
+        <p class="exhibition-lead">
+          تجارب حية تُصمم من الصفر بأدق التفاصيل المعمارية والتاريخية لتلائم طبيعة ومكانة كل مناسبة.
+        </p>
+      </div>
+
+      <!-- Minimalist Architectural Controls -->
+      <div class="exhibition-controls">
+        <button type="button" class="exhibition-nav-btn" (click)="slidePrev()" aria-label="السابق">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <button type="button" class="exhibition-nav-btn" (click)="slideNext()" aria-label="التالي">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Full-Width Horizontal Exhibition Swiper (Partial Slide Visibility & Momentum) -->
+  <div class="exhibition-carousel-wrap">
+    <div #swiperRef class="swiper experiences-swiper">
+      <div class="swiper-wrapper">
+        @for (item of experiences; track item.number) {
+          <div class="swiper-slide">
+            <div class="exhibition-portal-slide">
+              <div class="portal-img-container">
+                <img [src]="item.image" [alt]="item.title" class="portal-real-img" />
+                <div class="portal-scrim"></div>
+              </div>
+
+              <div class="portal-content-overlay">
+                <div class="portal-badge-bar">
+                  <span class="portal-badge">{{ item.badge }}</span>
+                  <span class="portal-num">{{ item.number }}</span>
+                </div>
+
+                <span class="portal-category">{{ item.category }}</span>
+                <h3 class="portal-title">{{ item.title }}</h3>
+                <p class="portal-desc">{{ item.description }}</p>
+
+                <div class="portal-highlight-tag">
+                  <i class="fa-solid fa-sparkles h-bullet" aria-hidden="true"></i>
+                  <span class="h-text">{{ item.highlight }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="exhibition-bottom-invitation">
+      <span>هل ترغب في تصميم بيئة تراثية مخصصة لفعاليتك؟</span>
+      <a routerLink="/contact" class="btn-ghost-arch on-dark">
+        <span>طلب تصميم تجربة خاصة</span>
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+    </div>
+  </div>
+</section>

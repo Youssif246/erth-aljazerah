@@ -1,0 +1,64 @@
+<section class="previous-work-movement flow-spacing" id="previous-work">
+  <div class="container">
+    <!-- Editorial Masthead on Deep Charcoal Canvas -->
+    <div class="work-header">
+      <div class="header-main-text">
+        <span class="editorial-kicker on-dark">شواهد الإنجاز والتجارب الحية</span>
+        <h2 class="work-headline">أعمالنا السابقة</h2>
+        <p class="work-lead">
+          مشاهد حية وتجارب تراثية صُممت ونُفذت لتبقى خالدة في ذاكرة ووجدان الحضور.
+        </p>
+      </div>
+
+      <!-- Minimalist Architectural Controls -->
+      <div class="work-controls" aria-label="التحكم في المعرض">
+        <button 
+          type="button" 
+          class="work-nav-btn prev-btn" 
+          (click)="slidePrev()" 
+          title="السابق"
+          aria-label="السابق">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <button 
+          type="button" 
+          class="work-nav-btn next-btn" 
+          (click)="slideNext()" 
+          title="التالي"
+          aria-label="التالي">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Cinematic Exhibition Swiper Slider -->
+    <div class="work-slider-wrapper">
+      <div #portfolioSwiper class="swiper work-portfolio-swiper">
+        <div class="swiper-wrapper">
+          @for (item of projects; track item.id) {
+            <div class="swiper-slide">
+              <article class="portfolio-exhibition-panel">
+                <!-- Dominant Real Photography -->
+                <div class="panel-media-wrap">
+                  <img 
+                    [src]="item.image" 
+                    [alt]="item.title" 
+                    class="panel-real-photo" 
+                    loading="lazy" />
+                  <div class="panel-directional-scrim"></div>
+                </div>
+
+                <!-- Integrated Minimal Title Only -->
+                <div class="panel-content-overlay">
+                  <div class="panel-text-block">
+                    <h3 class="panel-title">{{ item.title }}</h3>
+                  </div>
+                </div>
+              </article>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
