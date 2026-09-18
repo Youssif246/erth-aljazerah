@@ -368,7 +368,7 @@
 
   /* Expanded, prominent hero box/container that fills mobile viewport gracefully */
   .hero-centerpiece {
-    width: min(100%, 540px);
+    width: min(100%, 560px);
     margin-inline: auto;
     margin-block: auto;
     display: flex;
@@ -377,7 +377,7 @@
     text-align: center;
   }
 
-  /* 1. Eyebrow with Editorial Gold Accent Line */
+  /* 1. Eyebrow (الجملة اللي فوق) with Editorial Gold Accent Line */
   .hero-eyebrow {
     display: inline-flex;
     align-items: center;
@@ -389,27 +389,27 @@
   .hero-eyebrow::before {
     content: '';
     display: inline-block;
-    width: 18px;
-    height: 1.5px;
+    width: 22px;
+    height: 2px;
     background-color: var(--ochre, #C18B44);
     border-radius: 1px;
-    opacity: 0.85;
+    opacity: 0.9;
   }
 
   .eyebrow-text {
-    font-size: 14.5px;
+    font-size: 16.5px;
     font-weight: 600;
     letter-spacing: 0.03em;
     color: #C18B44;
   }
 
-  /* 2. Main Headline: Large, impactful and clear */
+  /* 2. Main Headline (العنوان): Distinct, prominent and majestic */
   .hero-main-title {
-    font-size: clamp(28px, 6.8vw, 34px);
-    font-weight: 700;
-    line-height: 1.50;
+    font-size: clamp(32px, 7.8vw, 38px);
+    font-weight: 800;
+    line-height: 1.44;
     margin-inline: auto;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
     text-align: center;
   }
 
@@ -425,15 +425,15 @@
     text-wrap: balance;
   }
 
-  /* 3. Supporting Description: Larger, comfortable and well-proportioned */
+  /* 3. Supporting Description (الجملة اللي تحت): Large, comfortable and easily legible */
   .hero-supporting-copy {
-    font-size: clamp(15px, 3.8vw, 16.5px);
-    line-height: 1.72;
-    max-width: min(100%, 460px);
+    font-size: clamp(16.5px, 4.2vw, 18.5px);
+    line-height: 1.75;
+    max-width: min(100%, 480px);
     margin-inline: auto;
-    margin-bottom: 26px;
+    margin-bottom: 28px;
     padding-inline: 0;
-    color: rgba(250, 247, 240, 0.88);
+    color: rgba(250, 247, 240, 0.92);
   }
 
   /* 4. Substantial Primary CTA */
@@ -444,12 +444,12 @@
   }
 
   .hero-cta-btn {
-    min-height: 50px;
-    padding: 13px 34px;
-    font-size: 15px;
+    min-height: 52px;
+    padding: 14px 36px;
+    font-size: 16px;
     font-weight: 600;
     width: auto;
-    max-width: 270px;
+    max-width: 280px;
     gap: 12px;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22);
   }
@@ -479,37 +479,37 @@
 
   .hero-eyebrow {
     gap: 8px;
-    margin-bottom: 13px;
+    margin-bottom: 14px;
   }
 
   .hero-eyebrow::before {
-    width: 15px;
-    height: 1.5px;
+    width: 18px;
+    height: 2px;
   }
 
   .eyebrow-text {
-    font-size: 13.5px;
+    font-size: 15.5px;
   }
 
   .hero-main-title {
-    font-size: clamp(26px, 7.2vw, 30px);
-    line-height: 1.48;
-    margin-bottom: 16px;
+    font-size: clamp(28px, 7.6vw, 33px);
+    line-height: 1.42;
+    margin-bottom: 18px;
   }
 
   .hero-supporting-copy {
-    font-size: 14.5px;
-    line-height: 1.70;
-    max-width: 380px;
-    margin-bottom: 22px;
+    font-size: 16px;
+    line-height: 1.72;
+    max-width: 410px;
+    margin-bottom: 24px;
   }
 
   .hero-cta-btn {
-    min-height: 48px;
-    padding: 12px 30px;
-    font-size: 14.5px;
+    min-height: 50px;
+    padding: 13px 32px;
+    font-size: 15.5px;
     gap: 12px;
-    max-width: 250px;
+    max-width: 260px;
   }
 }
 
@@ -530,29 +530,34 @@
     max-width: 390px;
   }
 
+  .hero-eyebrow::before {
+    width: 16px;
+    height: 1.5px;
+  }
+
   .eyebrow-text {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .hero-main-title {
-    font-size: clamp(24px, 6.8vw, 27px);
-    line-height: 1.46;
-    margin-bottom: 15px;
+    font-size: clamp(27px, 7.4vw, 30px);
+    line-height: 1.40;
+    margin-bottom: 16px;
   }
 
   .hero-supporting-copy {
-    font-size: 14px;
-    line-height: 1.68;
-    max-width: 350px;
-    margin-bottom: 20px;
+    font-size: 15.5px;
+    line-height: 1.70;
+    max-width: 370px;
+    margin-bottom: 22px;
   }
 
   .hero-cta-btn {
     min-height: 48px;
-    padding: 12px 28px;
-    font-size: 14px;
+    padding: 12px 30px;
+    font-size: 15px;
     gap: 11px;
-    max-width: 240px;
+    max-width: 250px;
   }
 }
 
@@ -575,36 +580,36 @@
 
   .hero-eyebrow {
     gap: 6px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   .hero-eyebrow::before {
-    width: 12px;
+    width: 14px;
     height: 1.5px;
   }
 
   .eyebrow-text {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .hero-main-title {
-    font-size: 23px;
-    line-height: 1.44;
-    margin-bottom: 13px;
+    font-size: 25px;
+    line-height: 1.38;
+    margin-bottom: 14px;
   }
 
   .hero-supporting-copy {
-    font-size: 13.5px;
-    line-height: 1.65;
-    max-width: 320px;
-    margin-bottom: 18px;
+    font-size: 14.5px;
+    line-height: 1.68;
+    max-width: 330px;
+    margin-bottom: 20px;
   }
 
   .hero-cta-btn {
-    min-height: 46px;
-    padding: 11px 24px;
-    font-size: 13.5px;
-    max-width: 230px;
+    min-height: 48px;
+    padding: 12px 26px;
+    font-size: 14.5px;
+    max-width: 240px;
     gap: 10px;
   }
 }
