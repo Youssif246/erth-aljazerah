@@ -25,7 +25,7 @@
         @for (c of clients; track c.id) {
           <div class="swiper-slide client-slide">
             <div class="client-logo-stage" [attr.aria-label]="c.name" [title]="c.name">
-              <img [src]="c.logo" [alt]="c.name" class="client-real-logo" loading="lazy" />
+              <img [src]="c.logo" [alt]="c.name" class="client-real-logo" loading="lazy" decoding="async" />
             </div>
           </div>
         }

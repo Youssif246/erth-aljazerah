@@ -112,7 +112,7 @@
             <!-- Visual Column: Photo Frame + Badges -->
             <div class="service-card-visual">
               <div class="service-photo-frame">
-                <img [src]="s.image" [alt]="s.title" class="service-real-thumb" loading="lazy" />
+                <img [src]="s.image" [alt]="s.title" class="service-real-thumb" loading="lazy" decoding="async" />
                 <div class="service-photo-overlay" aria-hidden="true"></div>
                 <span class="service-num-badge">{{ s.number }}</span>
               </div>

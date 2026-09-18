@@ -1,0 +1,227 @@
+/* ==========================================================================
+   Erth Aljazira — Precision Architectural Logo Construction & Reveal
+   Pure Logo Construction: Draw → Construct → Reveal → Settle
+   ========================================================================== */
+
+:host {
+  display: contents;
+}
+
+.preloader-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100svh;
+  z-index: 999999;
+  background-color: #12110F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  opacity: 1;
+  transition: opacity 0.42s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: opacity;
+}
+
+/* Seamless, natural exit into existing hero */
+.preloader-overlay.is-exiting {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   Logo Construction Stage
+   -------------------------------------------------------------------------- */
+.logo-construction-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 560px;
+  padding-inline: 24px;
+}
+
+/* --------------------------------------------------------------------------
+   The Logo Viewport & Architectural Drawing Canvas
+   -------------------------------------------------------------------------- */
+.logo-viewport {
+  position: relative;
+  width: clamp(160px, 34vw, 210px);
+  aspect-ratio: 521 / 459;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: clamp(24px, 3.8vh, 34px);
+}
+
+/* SVG Vector Drawing Layer */
+.logo-drawing-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Fine Golden Architectural Construction Lines */
+.logo-path {
+  fill: transparent;
+  stroke: #C18B44;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 750;
+  stroke-dashoffset: 750;
+  will-change: stroke-dashoffset, stroke-opacity;
+}
+
+/* Tier 1: 0.10s – 1.25s Upper Cornice & Pediment Elements (Calm, deliberate stroke) */
+.tier-upper .logo-path {
+  animation: drawLine 1.15s cubic-bezier(0.25, 1, 0.5, 1) 0.10s forwards;
+}
+
+/* Tier 2: 0.45s – 1.70s Heritage Windows, Friezes & Wall Elements */
+.tier-mid .logo-path {
+  animation: drawLine 1.25s cubic-bezier(0.25, 1, 0.5, 1) 0.45s forwards;
+}
+
+/* Tier 3: 0.80s – 2.10s Main Central Pillars & Fortifications */
+.tier-pillars .logo-path {
+  animation: drawLine 1.30s cubic-bezier(0.25, 1, 0.5, 1) 0.80s forwards;
+}
+
+/* Tier 4: 1.15s – 2.35s Base Plinths & Foundation Footing */
+.tier-base .logo-path {
+  animation: drawLine 1.20s cubic-bezier(0.25, 1, 0.5, 1) 1.15s forwards;
+}
+
+@keyframes drawLine {
+  0% {
+    stroke-dashoffset: 750;
+    stroke-opacity: 0.15;
+  }
+  30% {
+    stroke-opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-opacity: 0.5;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Full Authentic Logo Artwork (Fades in over linework: 1.95s - 2.50s)
+   Guarantees 100% fidelity to the original Erth Aljazira logo
+   -------------------------------------------------------------------------- */
+.logo-artwork-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  overflow: hidden;
+  animation: artworkSolidify 0.65s cubic-bezier(0.16, 1, 0.3, 1) 1.95s forwards;
+  will-change: opacity;
+}
+
+@keyframes artworkSolidify {
+  0% {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.logo-artwork-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Understated Brand Typography (2.30s - 2.85s)
+   -------------------------------------------------------------------------- */
+.brand-text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  opacity: 0;
+  transform: translateY(6px);
+  animation: typographyFadeIn 0.60s cubic-bezier(0.16, 1, 0.3, 1) 2.30s forwards;
+  will-change: opacity, transform;
+}
+
+@keyframes typographyFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.brand-name {
+  margin: 0;
+  font-family: var(--font-primary, 'IBM Plex Sans Arabic', sans-serif);
+  font-size: clamp(1.45rem, 3.5vw, 1.85rem);
+  font-weight: 700;
+  color: var(--ink-light, #FAF7F0);
+  letter-spacing: normal;
+  line-height: 1.2;
+}
+
+.brand-tagline {
+  margin: 0;
+  font-family: var(--font-primary, 'IBM Plex Sans Arabic', sans-serif);
+  font-size: clamp(0.85rem, 2.1vw, 1rem);
+  font-weight: 400;
+  color: #C18B44;
+  letter-spacing: 0.02em;
+  opacity: 0.92;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Proportions (Mobile & Tablet)
+   -------------------------------------------------------------------------- */
+@media (max-width: 430px) {
+  .logo-viewport {
+    width: clamp(140px, 38vw, 175px);
+    margin-bottom: 20px;
+  }
+
+  .brand-name {
+    font-size: 1.4rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .logo-viewport {
+    width: 130px;
+    margin-bottom: 18px;
+  }
+
+  .brand-name {
+    font-size: 1.3rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.82rem;
+  }
+}
